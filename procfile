@@ -1,1 +1,1 @@
-web: gunicorn django_resetbali.wsgi
+web: gunicorn django_resetbali.wsgi:application
