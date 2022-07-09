@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,27 +16,47 @@
 </head>
 
 <body class="h-100">
+<header>
 
-    <nav class="navbar navbar-expand-md align-items-center ">
+    <nav class="navbar main-navbar navbar-expand-md text-center ">
         <div class="container-fluid">
-            <a class="navbar-brand nav-icon" href="index.html"> Reset Bali </a>
-        <ul class="list-unstyled navbar-nav p-4">
-            <li class="p-2"><a href="index.html"> Home</a></li>
-            <li class="nav-item dropdown p-2">
-                <a class="dropdown-toggle nav-link"> Our Programmes</a>
-                <ul class="dropdown-menu">
-                    <li><a href=""> option a </a></li>
-                    <li><a href=""> option b </a></li>
-                    <li><a href=""> option c </a></li>
-                </ul>
-            </li>
-            <li class="p-2"><a href="contact.html"> Contact us</a></li>
-          
-            <li class="pl-5"><a href="" class="btn btn-info"> Login</a></li>
-            <li class="p-1"><a href="" class="btn btn-light"> Register</a></li>
-        </ul>
-   
-    </div>
+            <div class="navbar-header">
+            <a class="navbar-brand nav-icon " href="index.html"> <h2> Reset Bali </h2> </a>
+            </div>
+
+            <ul class="list-unstyled nav navbar-nav p-4 text-center">
+                <li class="p-2 active"><a href="index.html"> Home</a></li>
+                <li class="p-2 has-children dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
+                
+                        <ul class="list-unstyled">
+                            <li><a href=""> option a </a></li>
+                            <li><a href=""> option b </a></li>
+                            <li><a href=""> option c </a></li>
+                        </ul>
+                    
+                </li>
+                <li class="p-2"><a href="contact.html"> Contact us</a></li>
+                
+                <li class="pl-5"><a href="" class="btn btn-info"> Login</a></li>
+                <li class="p-1"><a href="" class="btn btn-light"> Register</a></li>
+            </ul>
+
+        </div>
     </nav>
 
+        <div class = "hero">
+            
+        </div>
+        <div class="hero-text mb-5">
+            <h2 class = "text-center">
+                Your peaceful oasis <Br> awaits you
+            </h2> 
+            <p class = "text-center"> Take time out and experience one <br>
+            of our retreat packages</p>
+        </div>
+
+        <div class="about  m-4">
+            <h3> Welcome to Reset Bali </h3><br>
+            <p> Escape to one of our Bali locations and experience complete relaxation. <br> Choose from one of our three programmes, all offering <br> Yoga, Meditation, Sea swimming and Hiking.</p>
 </body>

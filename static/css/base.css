@@ -1,13 +1,49 @@
-
+body{
+    margin:0;
+    padding:0;
+}
 .main-navbar{
-    width: 100%;
-    align-items: center;
+    background-color: antiquewhite;
 }
 
+.main-navbar:after{
+    content: '';
+    clear:both;
+    display:block;
+}
+.main-navbar > ul > li {
+    float:left;
+    position:relative;
+}
+
+.main-navbar ul li a {
+    color: black;
+    letter-spacing: 1px;
+    display: block;
+    padding:5px;
+
+}
+.main-navbar ul li:hover a{
+    background-color: white;
+    
+}
+.main-navbar ul ul{
+    display:none;
+    position:absolute;
+    
+}
+
+.main-navbar ul li:hover > ul{
+    display:block;
+    width: 100%;
+    
+}
 .nav-icon{
     width:30%;
     align-items: center;
-
+    color: black;
+    letter-spacing: 3px;
+    
 }
 .navbar-nav{
     
