@@ -1,9 +1,11 @@
 body{
     margin:0;
     padding:0;
+    font-family: Montserrat, sans-serif;
 }
 .main-navbar{
-    background-color: antiquewhite;
+    background-color: white;
+    height:80px;
 }
 
 .main-navbar:after{
