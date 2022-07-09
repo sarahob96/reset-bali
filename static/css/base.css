@@ -55,3 +55,9 @@ body{
     align-items: center;
 
 }
+
+.hero img{
+    width:100%;
+    height: 50%;
+    
+}
