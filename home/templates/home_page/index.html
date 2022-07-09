@@ -117,17 +117,26 @@
                 
                 </div>
             </div>
-            
-            
-            
-            
-            
-            
+           
             <div class="col review-image">
                 <img src="{%static 'images/swing1.jpeg'%}">
             </div>
         </div>
         </div>
+
+        <hr>
+        <div class="review-form">
+                
+            <h3 class=""> We would love to hear about your experience?</h3>
+            <h4> Submit your review here</h4>
+
+            <form action="" method="post">
+                {% csrf_token %}
+                {{form}}
+                <input type = "submit">
+            </form>
+            </div>
+            
         <script>
             $(".testimonial-text").owlCarousel({
                 loop: true,
