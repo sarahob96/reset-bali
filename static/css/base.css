@@ -68,9 +68,7 @@ body{
     font-size: 20px;
 }
 
-.review-image img{
-    width: 100%;
-}
+
 
 .review-heading{
     letter-spacing: 2px;
@@ -79,6 +77,17 @@ body{
 
 .testimonial-section .reviews .testimonial-text {
     position: relative;
+
+}
+.review-image img{
+    width: 100%;
+}
+.review-image{
+    height:500px;
+}
+.testimonial-section{
+    width: 50%;
+    height: 500px;
 
 }
 
@@ -90,7 +99,7 @@ body{
 }
 
 .testimonial-text .review{
-    background: grey;
+ 
     flex: 1;
     margin: 2px;
 
