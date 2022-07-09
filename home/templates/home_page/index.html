@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;1,100;1,300&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cc5874c006.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+
 
     <title> Reset Bali </title>
 
@@ -57,10 +62,80 @@
                 Your peaceful oasis <Br> awaits you
             </h2> 
             <p class = "text-center"> Take time out and experience one <br>
-            of our retreat packages</p>
+            of our retreat packages   <i class="fa-solid fa-circle-arrow-right"></i> </p>
         </div>
 
-        <div class="about  m-4">
-            <h3> Welcome to Reset Bali </h3><br>
-            <p> Escape to one of our Bali locations and experience complete relaxation. <br> Choose from one of our three programmes, all offering <br> Yoga, Meditation, Sea swimming and Hiking.</p>
+        <div class="about m-4">
+            <h2> Welcome to Reset Bali </h2><br>
+            <p class="lead welcome-text"> Escape to one of our Bali locations and experience complete relaxation. We currently run our retreats in two beautiful Bali locations, Ubud and Seminyak. Choose from one of our three programmes, all offering Yoga, Meditation, Sea swimming and Hiking. If you want a quick weekend retreat, our 3-day programme could be for you. We also offer a 5-day and 7-day retreat for those wanting just that big longer to treat themselves and unwind!</p>
+            </div>
+
+        <div class="reviews container-fluid p-5">
+            <div class="row">
+            <div class="col testimonial-section">
+                <h3 class="text-center review-heading pt-2"> Testimonials </h3>
+                <p class="text-center pt-2"> Look what our amazing attendees have said about us </p>
+                <div class="testimonial-text owl-carousel">
+
+
+                    <div class="review-1 review active"> 
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+                        <div class = "personal-info"></div>
+                        <img src=''> 
+                        <p> name1</p>
+                        <p> programme </p>
+                    </div>
+                    <div class="review-2 review"> 
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+                        <div class = "personal-info"></div>
+                        <img src=""> 
+                        <p> name2</p>
+                        <p> programme </p>
+                    </div>
+                    <div class="review-3 review"> 
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+                        <div class = "personal-info"></div>
+                        <img src=""> 
+                        <p> name3</p>
+                        <p> programme </p>
+                    </div>
+                    <div class="review-4 review"> 
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                        </p>
+                        <div class = "personal-info"></div>
+                        <img src=""> 
+                        <p> name4</p>
+                        <p> programme </p>
+                    </div>
+                
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            <div class="col review-image">
+                <img src="{%static 'images/swing1.jpeg'%}">
+            </div>
+        </div>
+        </div>
+        <script>
+            $(".testimonial-text").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true,
+            });
+        </script>
+   
 </body>
+</html>
