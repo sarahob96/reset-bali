@@ -116,3 +116,9 @@ ul{
     object-fit: cover;
 }
 
+.review-form-container{
+    background-color: #e6e6fa;
+    width: 50%;
+    border-radius: 25px;
+    padding: 20px;
+}

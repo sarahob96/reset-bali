@@ -127,16 +127,18 @@
         <hr>
         <div class="review-form">
                 
-            <h3 class=""> We would love to hear about your experience?</h3>
-            <h4> Submit your review here</h4>
-
+            <h3 class="m-4"> We would love to hear about your experience</h3>
+            <h4 class = "text-center pt-20"> Submit your review here</h4>
+            <div class="align-items-center justify-content-center d-flex">
+            <div class = "review-form-container">
             <form action="" method="post">
                 {% csrf_token %}
-                {{form.as_p}}
+                {{ form.as_p }}
                 <input type = "submit">
             </form>
             </div>
-            
+            </div>
+        </div> 
         <script>
             $(".testimonial-text").owlCarousel({
                 loop: true,

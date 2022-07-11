@@ -9,10 +9,10 @@ class ReviewForm(forms.ModelForm):
         fields = "__all__"
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': "Explain your experience in a few words"}),
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'Programme_attended': forms.TextInput(attrs={'class': 'form-control'}),
             'your_experience': forms.TextInput(attrs={'class': 'form-control'}),
             'date': forms.NumberInput(attrs={'class': 'form-control'}),
-            'rating': forms.Select(attrs={'class': 'form-control'}),
+            'rating': forms.Select(attrs={'class': 'form-control',}),
         }
