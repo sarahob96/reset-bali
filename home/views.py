@@ -1,21 +1,30 @@
 from django.shortcuts import render
 from .forms import ReviewForm
 from .models import Review
+from django.contrib import messages 
+
 # Create your views here.
 
-def get_home_page(request):
-    form = ReviewForm()
 
+def form_review(request):
+    """
+    """
+    form = ReviewForm()
     if request.method == 'POST':
-        print(request.POST)
-        form = ReviewForm(request.POST)
+        review_fields = {
+            'title': request.POST['title'],
+            'name': request.POST['name'],
+            'rating': request.POST['rating'],}
+        form = ReviewForm(review_fields)
+        
+    
         if form.is_valid():
-            form.save()
+            review = form.save()
+            review.save()
+                
+            messages.success(request, "thanks for your review")
+    else:
+        messages.error(request, 'your review did not submit')
 
     context = {'form': form}
     return render(request, 'home_page/index.html', context)
-
-class AddView():
-    model = Review
-    form_class = ReviewForm()
-    template_name = "home/"

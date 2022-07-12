@@ -1,18 +1,11 @@
-from django.forms import ModelForm
-from .models import Review
 from django import forms
+from .models import Review
+
 
 
 class ReviewForm(forms.ModelForm):
+    """
+    """
     class Meta:
         model = Review
-        fields = "__all__"
-
-        widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': "Explain your experience in a few words"}),
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'Programme_attended': forms.TextInput(attrs={'class': 'form-control'}),
-            'your_experience': forms.TextInput(attrs={'class': 'form-control'}),
-            'date': forms.NumberInput(attrs={'class': 'form-control'}),
-            'rating': forms.Select(attrs={'class': 'form-control',}),
-        }
+        fields = ['title', 'name', 'programme_attended', 'your_experience', 'rating']

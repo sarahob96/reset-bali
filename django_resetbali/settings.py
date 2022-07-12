@@ -33,10 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['reset-bali.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = [
-   "https://8000-sarahob96-resetbali-k5b4t43zgg4.ws-eu53.gitpod.io/"
-]
-
+CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu53.gitpod.io']
 
 # Application definition
 
@@ -46,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'cloudinary',
     'home'
@@ -126,6 +124,8 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+SITE_ID = 1
 
 
 # Static files (CSS, JavaScript, Images)
