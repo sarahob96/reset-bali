@@ -14,7 +14,10 @@ def form_review(request):
         review_fields = {
             'title': request.POST['title'],
             'name': request.POST['name'],
-            'rating': request.POST['rating'],}
+            'rating': request.POST['rating'],
+            'programme_attended': request.POST['programme_attended'],
+            'your_experience': request.POST['your_experience'],
+        }
         form = ReviewForm(review_fields)
         
     
