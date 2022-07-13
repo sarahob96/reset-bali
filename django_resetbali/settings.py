@@ -33,7 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['reset-bali.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu53.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu54.gitpod.io']
 
 # Application definition
 
@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.staticfiles',
     'cloudinary',
-    'home'
+    'home',
+    'accounts',
 ]
 
 MIDDLEWARE = [

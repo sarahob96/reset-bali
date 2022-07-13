@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from .forms import ReviewForm
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import ReviewForm 
 from .models import Review
 from django.contrib import messages 
+
 
 # Create your views here.
 
@@ -23,7 +24,7 @@ def form_review(request):
     
         if form.is_valid():
             review = form.save()
-            review.save()
+           
                 
             messages.success(request, "thanks for your review")
     else:
@@ -31,3 +32,4 @@ def form_review(request):
 
     context = {'form': form}
     return render(request, 'home_page/index.html', context)
+
