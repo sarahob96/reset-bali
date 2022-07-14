@@ -134,3 +134,7 @@ ul{
     
 }
 
+.login-form{
+    height: 100vh;
+    object-fit: contain;
+}

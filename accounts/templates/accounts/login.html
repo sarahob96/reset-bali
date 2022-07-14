@@ -26,17 +26,22 @@
 
 <body class="h-100">
 
+    
     <div class = "login-form">
-    <h1> Login here </h1>
-
-    <form action = "" method = "post">
+    <h1 class="text-center"> Login here </h1>
+    
+        <div>
+            <div class = "align-items-center justify-content-center d-flex">
+            <div class="form-login-container border m-4">
+    <form action = "" method = "post" class="p-10" >
         {% csrf_token %}
         {{ form.as_p}}
 
         <input type = "submit">
     </form>
     </div>
-   <footer>
+    </div>
+   
 <footer>
         <ul class="social-links list-unstyled text-center">
             <li>
@@ -54,6 +59,6 @@
         </ul>
         <p class="copyright text-center"> &copy; 2022 Reset Bali</p>
     </footer>
-   </footer>
+ 
 </body>
 </html>
