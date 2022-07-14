@@ -20,7 +20,6 @@ def form_review(request):
             'your_experience': request.POST['your_experience'],
         }
         form = ReviewForm(review_fields)
-        
     
         if form.is_valid():
             review = form.save()

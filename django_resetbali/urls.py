@@ -20,6 +20,7 @@ from home.views import form_review
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', form_review, name='form_review'),
+    path('home/', include('home.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/,', include('accounts.urls'))
 

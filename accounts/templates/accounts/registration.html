@@ -26,15 +26,16 @@
 
 <body class="h-100">
 
-    <h1> Login here </h1>
+    <div class = "login-form">
+    <h1> Register to become part of the Reset Bali community  </h1>
 
-
-    <form action = "" method = POST>
+    <form action = "" method = "post">
         {% csrf_token %}
         {{ form.as_p}}
 
-        <input type = "submit">
+        <input type = "submit" name = "Register now">
     </form>
+    </div>
    <footer>
 <footer>
         <ul class="social-links list-unstyled text-center">
