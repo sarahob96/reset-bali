@@ -17,22 +17,30 @@ def account_login(request):
         form = LoginForm(login_fields)
         if form.is_valid():
             form.save()
-          
-
-    else:
-        form = LoginForm()
+        
+        else:
+            form = LoginForm()
     
     return render(request, 'accounts/login.html', {"form": form})
 
 def accountRegister(request):
 
-    if request.method == 'post':
-        form = Register()
+    form = Register()
+    if request.method == 'POST':
+
+        account_fields = {
+            'userName': request.POST['userName'],
+            'email': request.POST['email'],
+            'userPassword': request.POST['userPassword'],
+            'userPasswordRepeat': request.POST['userPasswordRepeat'],
+        }
+
+        form = Register(account_fields)
+ 
         if form.is_valid():
             form.save()
-            return redirect()
-
-    else:
-        form = Register()
+        
+        else:
+            form = Register()
 
     return render(request, 'accounts/registration.html', {"form": form})
