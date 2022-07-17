@@ -22,12 +22,7 @@ def form_review(request):
         form = ReviewForm(review_fields)
     
         if form.is_valid():
-            review = form.save()
-           
-                
-            messages.success(request, "thanks for your review")
-    else:
-        messages.error(request, 'your review did not submit')
+           form.save()
 
     context = {'form': form}
     return render(request, 'home_page/index.html', context)
