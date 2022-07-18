@@ -17,7 +17,7 @@ def login_form(request):
 
         if user is not None:
             login(request, user)
-            return redirect('register')
+            return redirect('home')
         else:
             messages.success(request, ("Error with logging in, please try again"))
             return redirect('login')

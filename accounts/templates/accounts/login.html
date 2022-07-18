@@ -44,11 +44,7 @@
         </div>
         <input type = "submit">
     </form>
-     {% if messages %}
-        {% for message in messages %}
-            {{ message }}
-        {% endfor %}
-     {% endif %}
+     
 
             <div>
         <p> Don't have an account with us? <a href="{% url 'register' %}"> Sign up</a> </p>
