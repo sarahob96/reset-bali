@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import form_review
-from accounts.views import account_login, account_register
+from accounts import views
+
 
 urlpatterns = [
   
@@ -24,8 +25,6 @@ urlpatterns = [
     path('', form_review, name='form_review'),
     path('home/', include('home.urls'), name='home'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/,', include('accounts.urls')),
-    path('login/', account_login),
-    path('login/', account_register)
+    path('accounts/', include('accounts.urls')),
 
 ]
