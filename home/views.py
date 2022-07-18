@@ -24,9 +24,8 @@ def form_review(request):
         form = ReviewForm(review_fields)
     
         if form.is_valid():
-           form.save()
+            form.save()
  
-
     context = {'form': form}
     return render(request, 'home_page/index.html', context)
 
