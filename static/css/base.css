@@ -167,7 +167,9 @@ object-fit: contain;
     width:70%;
     
 }
-
+.renew-programme img{
+    width: 70%;
+}
 .img-container{
     object-position: center;
 }
