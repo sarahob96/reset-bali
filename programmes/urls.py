@@ -5,9 +5,9 @@ from . import views
 urlpatterns = [
   
     path('locations', views.locations, name="locations"),
-    path('rewind', views.locations, name="rewind"),
-    path('restart', views.locations, name="restart"),
-    path('renew', views.locations, name="renew"),
-    path('ubud', views.locations, name="ubud"),
-    path('seminyak', views.locations, name="seminyak"),
+    path('rewind', views.rewind, name="rewind"),
+    path('restart', views.restart, name="restart"),
+    path('renew', views.renew, name="renew"),
+    path('ubud', views.ubud, name="ubud"),
+    path('seminyak', views.seminyak, name="seminyak"),
 ]

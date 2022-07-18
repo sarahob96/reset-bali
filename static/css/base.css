@@ -157,3 +157,17 @@ object-fit: contain;
     color:black;
     padding: 10px;
 }
+
+.rewind-programme img{
+    width:70%;
+    
+}
+
+.restart-programme img{
+    width:70%;
+    
+}
+
+.img-container{
+    object-position: center;
+}

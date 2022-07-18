@@ -57,6 +57,33 @@
         </div>
     </nav>
 
+    <div class="container-fluid ubud-container">
+        <div class="row rewind-programme">
+            <div class="col-5 img-container">
+                <img src="{% static '/images/flower1.jpeg'%}" >
+            </div>
+            <div class="col-5"> 
+                <h2> REWIND </h2>
+                <p> Our 3 day rewind programme </p>
+                <button><a href="{% url 'rewind' %}"> ENQUIRE NOW </a></button>
+
+            </div>
+        </div>
+        <div class="row restart-programme">
+            <div class="col-5 img-container">
+                <img src="{% static '/images/stones.jpeg'%}">
+            </div>
+            <div class="col-5"> 
+                <h2> RESTART </h2>
+                <p> Our 5 day restart programme </p>
+                <button><a href="{% url 'restart' %}"> ENQUIRE NOW </a></button>
+            </div>
+        </div>
+        
+        
+
+    </div>
+    
    <footer>
 <footer>
         <ul class="social-links list-unstyled text-center">
