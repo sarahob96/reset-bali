@@ -12,18 +12,26 @@ def account_login(request):
 
         login_fields = {
             'userName': request.POST['userName'],
-            'userPassword': request.POST['userPassword'],
-        }
+            'userPassword': request.POST['userPassword']}
+
         form = LoginForm(login_fields)
-        if form.is_valid():
-            form.save()
+    if form.is_valid():
+        form.save()
         
-        else:
-            form = LoginForm()
-    
+    else:
+        form = LoginForm()   
+    user = authenticate(request, userName='userName', userPassword='userPassword')
+
+    if user is not None:
+        login(request, user)
+        return redirect('register')
+      
     return render(request, 'accounts/login.html', {"form": form})
 
-def accountRegister(request):
+def account_logout(request):
+    return render(request,'accounts/logout.html', {})
+
+def account_register(request):
 
     form = Register()
     if request.method == 'POST':
