@@ -34,10 +34,10 @@ def new_account(request):
             password = form.cleaned_data['password1']
             user = authenticate(username=username, password=password)
             
-        if user is not None:
-            login(request, user)
-            return redirect('home')
+            if user is not None:
+                login(request, user)
+                return redirect('home')
     else:
         form = UserCreationForm()
         
-    return render(request, 'accounts/registration.html', {'form':form,})
+    return render(request, 'accounts/registration.html', {'form': form, })

@@ -6,8 +6,6 @@ from django.contrib import messages
 
 # Create your views here.
 
-def homepage(request):
-    return render(request, 'home_page/index.html')
 
 def form_review(request):
     """
@@ -22,10 +20,13 @@ def form_review(request):
             'your_experience': request.POST['your_experience'],
         }
         form = ReviewForm(review_fields)
-    
+   
         if form.is_valid():
             form.save()
- 
+
     context = {'form': form}
     return render(request, 'home_page/index.html', context)
+
+def homepage(request):
+    return render(request, 'home_page/index.html')
 
