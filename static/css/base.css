@@ -149,3 +149,11 @@ object-fit: contain;
 
 }
 
+.image-title{
+  
+    text-align: center;
+    background-color: white;
+    position:absolute;
+    color:black;
+    padding: 10px;
+}
