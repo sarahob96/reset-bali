@@ -13,3 +13,9 @@ def restart(request):
 
 def renew(request):
     return render(request, 'programmes/renew.html')
+
+def ubud(request):
+    return render(request, 'programmes/ubud.html')
+
+def seminyak(request):
+    return render(request, 'programmes/seminyak.html')   
