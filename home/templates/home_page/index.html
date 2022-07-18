@@ -36,12 +36,12 @@
             <ul class="list-unstyled nav navbar-nav p-4 text-center">
                 <li class="p-2 active"><a href="index.html"> Home</a></li>
                 <li class="p-2 has-children dropdown">
-                    <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
+                    <a href="{% url 'locations' %}" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
                 
                         <ul class="list-unstyled">
-                            <li><a href=""> option a </a></li>
-                            <li><a href=""> option b </a></li>
-                            <li><a href=""> option c </a></li>
+                            <li><a href="{% url 'rewind' %}"> Rewind </a></li>
+                            <li><a href="{% url 'restart' %}"> Restart</a></li>
+                            <li><a href="{% url 'renew' %}"> Renew </a></li>
                         </ul>
                     
                 </li>
