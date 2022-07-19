@@ -58,23 +58,28 @@
     </nav>
 
     <div class="container-fluid ubud-container">
+
+        <h3 class="text-center retreat-heading"> Our UBUD retreats </h3>
         <div class="row rewind-programme">
             <div class="col-5 img-container">
+                <h2 class="carousel-caption image-title-2"> REWIND </h2>
                 <img src="{% static '/images/flower1.jpeg'%}" >
             </div>
             <div class="col-5"> 
-                <h2> REWIND </h2>
+              
                 <p> Our 3 day rewind programme </p>
-                <button><a href="{% url 'rewind' %}"> ENQUIRE NOW </a></button>
+                <p> Among the green hillsides and rice terraces </p>
+                <button class="btn"><a href="{% url 'rewind' %}"> ENQUIRE NOW </a></button>
 
             </div>
         </div>
         <div class="row restart-programme">
             <div class="col-5 img-container">
+                <h2  class="carousel-caption image-title-2"> RESTART </h2>
                 <img src="{% static '/images/stones.jpeg'%}">
             </div>
             <div class="col-5"> 
-                <h2> RESTART </h2>
+                
                 <p> Our 5 day restart programme </p>
                 <button><a href="{% url 'restart' %}"> ENQUIRE NOW </a></button>
             </div>

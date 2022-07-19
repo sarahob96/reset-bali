@@ -172,4 +172,28 @@ object-fit: contain;
 }
 .img-container{
     object-position: center;
+ 
+
+}
+
+.retreat-heading{
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.rewind-programme{
+    margin: 20px;
+}
+
+.restart-programme{
+    margin: 20px;
+}
+
+.image-title-2{
+text-align: center;
+background-color: white;
+position:absolute;
+color:black;
+padding:0;
+
 }
