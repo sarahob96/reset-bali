@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'home',
     'accounts',
     'programmes',
-    'locations',
+    'contact',
 ]
 SITE_ID = 1
 
