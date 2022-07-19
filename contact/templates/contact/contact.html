@@ -60,10 +60,10 @@
         <div>
                <div class="row">
                 <div class="col-6 float-left">
-                        <p>Phone</p>
-                        <p> Email</p>
-                        <p> Locations</p>
-                        <div class="map"></div>
+                        <p>Phone: +62 877 8722 2220  </p>
+                        <p> Email: info@balireset.com</p>
+                        <p> Locations: </p>
+                        <div id="map"></div>
                     
 
                 </div>
@@ -74,8 +74,8 @@
 
 
         </div>
-   <footer>
 <footer>
+
         <ul class="social-links list-unstyled text-center">
             <li>
                 <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener"
@@ -92,6 +92,18 @@
         </ul>
         <p class="copyright text-center"> &copy; 2022 Reset Bali</p>
     </footer>
-   </footer>
+    <script>
+            function initMap() {
+                var googlemap = new google.maps.Map(document.getElementbyId("map"),{
+                    zoom : 4,
+                    center:{
+                        lat:-8.342124,
+                        lng:115.088438 
+                    }
+                });
+            }
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDevwKFROExWQ5itmHUhvNJMH_8sWbDBHw&callback=initMap"></script>
 </body>
 </html>
