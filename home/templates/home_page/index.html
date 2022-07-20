@@ -25,7 +25,7 @@
 </head>
 
 <body class="h-100">
-<header>
+
 
     <nav class="navbar main-navbar navbar-expand-md text-center ">
         <div class="container-fluid">
@@ -59,7 +59,9 @@
                 
         </div>
     </nav>
-
+        {% if user.is_authenticated %}
+        <div> <h4> Welcome </h4></div>
+        {% endif%}
         <div class = "hero" >
             <img src="{% static '/images/hero-image.jpeg'%}"> 
         </div>
@@ -85,41 +87,15 @@
 
 
                     <div class="review-1 review"> 
-                  
+                        {% for review in reviews %}
                         <p>
-                            
+                            {{ review.your_experience }}
                         </p>
                         <div class = "personal-info text-center">
-                        <p> name1</p>
-                        <p> programme </p>
+                        <p> {{ review.name }}</p>
+                        <p> {{ review.programme_attended }} </p>
                         </div>
-                    </div>
-                    <div class="review-2 review"> 
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                        </p>
-                        <div class = "personal-info text-center"> 
-                        <p> name2</p>
-                        <p> programme </p>
-                        </div>
-                    </div>
-                    <div class="review-3 review "> 
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                        <div class = "personal-info text-center">
-                        <p> name3</p>
-                        <p> programme </p>
-                        </div>
-                    </div>
-                    <div class="review-4 review"> 
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                        <div class = "personal-info text-center ">
-                        <p> name4</p>
-                        <p> programme </p>
-                        </div>
+                        {% endfor %}
                     </div>
                 
                 </div>
@@ -134,16 +110,20 @@
         <hr>
         <div class="review-form">
               
-            <h3 class="m-4"> We would love to hear about your experience</h3>
+            <h3 class="m-4 text-center"> We would love to hear about your experience</h3>
+            {% if user.is_authenticated %}
             <h4 class = "text-center pt-20"> Submit your review here</h4>
             <div class="align-items-center justify-content-center d-flex">
             <div class = "review-form-container">
-            <form action="{% url 'form_review' %}" method="post" >
+            <form action="{% url 'form_review' %}" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <input type = "submit">
             </form>
+            {% else %}
+            <div class="text-center"> <h4> <a href="{% url 'login'%}">Login</a> to leave a review</h4></div>
             </div>
+            {% endif %}
             </div>
   
         </div> 

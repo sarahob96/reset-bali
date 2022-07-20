@@ -208,3 +208,7 @@ div#map {min-height: 360px;}
 
 }
 
+.review-image{
+    width:50%;
+    float: right;
+}

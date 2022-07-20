@@ -6,11 +6,15 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+def homepage(request):
+
+    return render(request, 'home_page/index.html')
 
 
 def form_review(request):
     """
     """
+   
     form = ReviewForm()
     if request.method == 'POST':
         review_fields = {
@@ -25,9 +29,6 @@ def form_review(request):
         if form.is_valid():
             form.save()
 
-    context = {'form': form}
-    return render(request, 'home_page/index.html', context)
-
-def homepage(request):
-    return render(request, 'home_page/index.html')
+    reviews = Review.objects.all()
+    return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
 

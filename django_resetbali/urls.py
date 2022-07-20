@@ -18,15 +18,14 @@ from django.urls import path, include
 from home.views import form_review
 from accounts import views
 
-
 urlpatterns = [
     
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('home/', form_review, name='form_review'),
+    path('home/', include('home.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
     path('programmes/', include('programmes.urls')),
     path('contact/', include('contact.urls')),
-    path('programmes/', include('programmes.urls')),
+    
 ]
