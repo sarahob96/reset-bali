@@ -198,3 +198,13 @@ padding:0;
 
 }
 div#map {min-height: 360px;}
+
+.programme-img{
+ 
+    float: right;
+    margin-top: 30px;
+    margin-right: 100px;
+    width:35%;
+
+}
+
