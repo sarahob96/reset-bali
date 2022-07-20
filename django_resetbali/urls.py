@@ -28,4 +28,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('programmes/', include('programmes.urls')),
     path('contact/', include('contact.urls')),
+    path('programmes/', include('programmes.urls')),
 ]
