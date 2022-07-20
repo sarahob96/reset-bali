@@ -9,6 +9,9 @@ body{
 .main-navbar{
     background-color: white;
     height:80px;
+    position:fixed;
+    width: 100%;
+    z-index: 2;
 }
 
 .main-navbar:after{
