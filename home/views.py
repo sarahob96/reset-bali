@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ReviewForm 
 from .models import Review
 from django.contrib import messages 
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+
 
 
 def form_review(request):

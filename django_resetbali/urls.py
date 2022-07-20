@@ -20,10 +20,10 @@ from accounts import views
 
 
 urlpatterns = [
-  
+    
     path('admin/', admin.site.urls),
-    path('', form_review, name='form_review'),
-    path('home/', include('home.urls'), name='home'),
+    path('', include('home.urls')),
+    path('home/', form_review, name='form_review'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('accounts.urls')),
     path('programmes/', include('programmes.urls')),
