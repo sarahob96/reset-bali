@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ReviewForm 
 from .models import Review
+from django.views.generic import DeleteView
 from django.contrib import messages 
 from django.contrib.auth.decorators import login_required
 
@@ -32,3 +33,7 @@ def form_review(request):
     reviews = Review.objects.all()
     return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
 
+
+def delete_comment(DeleteView):
+    model = Review()
+    return render(request, 'home_page/index.html')
