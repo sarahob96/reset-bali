@@ -10,5 +10,5 @@ urlpatterns = [
     path('renew', views.renew, name="renew"),
     path('ubud', views.ubud, name="ubud"),
     path('seminyak', views.seminyak, name="seminyak"),
-    path('rewind', views.rewind_booking, name="rewind_booking")
+    path('programmes', views.rewind_booking, name="rewind_booking")
 ]
