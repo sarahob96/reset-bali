@@ -25,7 +25,6 @@
 </head>
 
 <body class="h-100">
-<header>
 
     <nav class="navbar main-navbar navbar-expand-md text-center ">
         <div class="container-fluid">
@@ -57,13 +56,31 @@
         </div>
     </nav>
 
+        <div class="rewind-form">
+              
+        <h3 class="m-4 text-center"> Summer 2022 booked out, enquire now for 2023.
+     
+        <div class="align-items-center justify-content-center d-flex">
+        <div class = "rewind-form-container">
+        <form action="{% url 'rewind_booking' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type = "submit" class="btn btn-dark"> Submit</button>
+        </form>
+    
+        </div>
+       
+        </div>
+
+    </div>
         <div class="programme-img-div">
                
                 <img src="{%static 'images/rewind.png'%}" class = "programme-img">     
 
         </div>
+        </div>
    <footer>
-<footer>
+
         <ul class="social-links list-unstyled text-center">
             <li>
                 <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener"
@@ -80,6 +97,6 @@
         </ul>
         <p class="copyright text-center"> &copy; 2022 Reset Bali</p>
     </footer>
-   </footer>
+ 
 </body>
 </html>
