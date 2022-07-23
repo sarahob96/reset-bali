@@ -8,8 +8,21 @@ from .forms import rewind_form
 def rewindbooking(request):
 
     form = rewind_form()     
-    context = {'form': form}
-    return render(request, "programmes/rewind.html", context)
+    if request.method == 'POST':
+        rewind_fields = {
+            'name1': request.POST['name1'],
+            'date': request.POST['date'],
+            'programme': request.POST['programme'],
+            'email': request.POST['email'],
+            'phone': request.POST['phone'],
+        
+        }
+        form = rewind_form(rewind_fields)
+   
+        if form.is_valid():
+            form.save()
+    
+    return render(request, "programmes/rewind.html", {'form': form})
 
 def rewind(request):
     return render(request, 'programmes/rewind.html')
