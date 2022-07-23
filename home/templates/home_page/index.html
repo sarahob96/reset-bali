@@ -48,8 +48,8 @@
                 <li class="p-2"><a href="{% url 'contact' %}"> Contact us</a></li>
                 
                 {% if user.is_authenticated %}
-                <li class="pl-5"><a href=""class="btn"> Goals </a></li>
-                <li class="pl-5"><a href="" class="btn"> Profile </a></li>
+        
+                <li class="pl-5"><a href="{% url 'profiles' %}" class="btn"> Profile </a></li>
                 <li class="pl-5"><a href="{% url 'logout' %}" class="btn"> Logout</a></li>
                 {%else%}
                 <li class="pl-5"><a href="{% url 'login' %}" class="btn btn-info"> Login</a></li>
