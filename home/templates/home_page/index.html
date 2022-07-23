@@ -59,11 +59,12 @@
                 
         </div>
     </nav>
-        {% if user.is_authenticated %}
-        <div> <h4> Welcome </h4></div>
-        {% endif%}
+        
         <div class = "hero" >
             <img src="{% static '/images/hero-image.jpeg'%}"> 
+            {% if user.is_authenticated %}
+        <div> <h4 class="carousel-caption"> Welcome {{ user.username }} </h4></div>
+        {% endif%}
         </div>
         <div class="hero-text mb-3 p-4">
             <h2 class = "text-center">
