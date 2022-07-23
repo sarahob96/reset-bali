@@ -68,8 +68,10 @@
       
         <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
             {% csrf_token %}
-            {{ form.as_p }}
+            <label for="username"> Username: </label>  {{user.username}}
             
+            {{ form.as_p }}
+           
             <button type = "submit" class="btn btn-dark"> Submit</button>
         </form>
         
@@ -86,7 +88,9 @@
         </div>
 
         <script>
-           
+           function populate(){
+            document.getelementById('form-username').value='user.username'
+           }
         </script>
 
    <footer>
@@ -108,5 +112,6 @@
         <p class="copyright text-center"> &copy; 2022 Reset Bali</p>
     </footer>
  
+
 </body>
 </html>

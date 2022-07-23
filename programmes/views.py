@@ -11,7 +11,7 @@ def rewindbooking(request):
     form = rewind_form()     
     if request.method == 'POST':
         rewind_fields = {
-            'name1': request.POST['name1'],
+            
             'date': request.POST['date'],
             'programme': request.POST['programme'],
             'email': request.POST['email'],
