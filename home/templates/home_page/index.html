@@ -39,7 +39,7 @@
                     <a href="{% url 'locations' %}" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
                 
                         <ul class="list-unstyled">
-                            <li><a href="{% url 'rewind' %}"> Rewind </a></li>
+                            <li><a href="{% url 'rewindbooking' %}"> Rewind </a></li>
                             <li><a href="{% url 'restart' %}"> Restart</a></li>
                             <li><a href="{% url 'renew' %}"> Renew </a></li>
                         </ul>
@@ -63,7 +63,7 @@
         <div class = "hero" >
             <img src="{% static '/images/hero-image.jpeg'%}"> 
             {% if user.is_authenticated %}
-        <div> <h4 class="carousel-caption"> Welcome {{ user.username }} </h4></div>
+        <h4 class="carousel-caption user-caption"> Welcome {{ user.username }} </h4></div>
         {% endif%}
         </div>
         <div class="hero-text mb-3 p-4">

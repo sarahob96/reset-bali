@@ -33,7 +33,3 @@ def form_review(request):
     reviews = Review.objects.all()
     return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
 
-
-def delete_comment(DeleteView):
-    model = Review()
-    return render(request, 'home_page/index.html')

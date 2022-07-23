@@ -125,6 +125,13 @@ body{
     padding: 20px;
 }
 
+.rewind-form-container{
+    background-color: #E8E8E8;
+    width: 50%;
+    border-radius: 25px;
+    padding: 20px;
+}
+
 .social-links>li {
     display: inline;
 }
@@ -213,4 +220,10 @@ div#map {min-height: 360px;}
 .review-image{
     width:50%;
     float: right;
+}
+
+.user-caption{
+    float:right;
+    bottom:-8%;
+
 }
