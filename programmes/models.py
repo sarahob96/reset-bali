@@ -8,7 +8,7 @@ class rewind(models.Model):
     PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
 
     name1 = models.CharField(max_length=20)
-    programme = models.CharField(max_length=20, choices=PROGRAMMES)
+    programme = models.CharField(max_length=20, choices=PROGRAMMES, default="Rewind")
     date = models.CharField(max_length=50)
     email = models.EmailField(max_length=50)
     phone = models.IntegerField()
