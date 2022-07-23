@@ -25,6 +25,7 @@
 </head>
 
 <body class="h-100">
+<header>
 
     <nav class="navbar main-navbar navbar-expand-md text-center ">
         <div class="container-fluid">
@@ -38,9 +39,9 @@
                     <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
                 
                         <ul class="list-unstyled">
-                            <li><a href=""> option a </a></li>
-                            <li><a href=""> option b </a></li>
-                            <li><a href=""> option c </a></li>
+                            <li><a href=""> Rewind </a></li>
+                            <li><a href=""> Restart </a></li>
+                            <li><a href=""> Renew </a></li>
                         </ul>
                     
                 </li>
@@ -55,42 +56,36 @@
             {% endif %}
         </div>
     </nav>
- 
-        
-    </div>
-      
-        <div class="rewind-form float-left">
-              
-            <h5 class="m-4 text-center"> Summer 2022 booked out, enquire now for 2023. </h5>
-     
-        <div class=" row align-items-center justify-content-center d-flex">
-        <div class = "col rewind-form-container">
-      
-        <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
-            {% csrf_token %}
-            {{ form.as_p }}
-            
-            <button type = "submit" class="btn btn-dark"> Submit</button>
-        </form>
-        
-        </div>
+    {% for booking in rewindbookings.bookings %}
+        {{ booking.programme }}
+        {{ booking.date }}
+        {% endfor %}
+       <h2>  {{ user.username }}'s bookings </h2>
+       <div>
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Programme</th>
+            <th scope="col">Dates</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+            {% for booking in bookings %}
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>{{ booking.programme }}</td>
+            <td>{{ booking.date }}</td>
+            <td>{{ booking.status }}</td>
+          </tr>
+         {% endfor %}
+        </tbody>
+        </table>
+       </div>
        
-        </div>
-        
-    </div>
-        <div class="col programme-img-div">
-               
-                <img src="{%static 'images/rewind.png'%}" class = "programme-img">     
-
-        </div>
-        </div>
-
-        <script>
-           
-        </script>
-
-   <footer>
-
+       
+<footer>
         <ul class="social-links list-unstyled text-center">
             <li>
                 <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener"
@@ -107,6 +102,6 @@
         </ul>
         <p class="copyright text-center"> &copy; 2022 Reset Bali</p>
     </footer>
- 
+   
 </body>
 </html>

@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import rewind_form
+from .models import rewind
 
 
 # Create your views here.
@@ -21,10 +22,14 @@ def rewindbooking(request):
    
         if form.is_valid():
             form.save()
-    
+   
     return render(request, "programmes/rewind.html", {'form': form})
 
-def rewind(request):
+def my_bookings(request):
+    bookings = rewind.objects.all()
+    return render(request, 'programmes/bookings.html', {'bookings': bookings})
+
+def rewind_page(request):
     return render(request, 'programmes/rewind.html')
 
 def locations(request):

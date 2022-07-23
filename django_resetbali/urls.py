@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from home.views import form_review
-from accounts import views
+from programmes.views import rewindbooking
 
 urlpatterns = [
     
@@ -28,5 +28,6 @@ urlpatterns = [
     path('programmes/', include('programmes.urls')),
     path('contact/', include('contact.urls')),
     path('profiles/', include('profiles.urls')),
+   
     
 ]
