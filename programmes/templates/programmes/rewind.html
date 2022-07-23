@@ -62,9 +62,11 @@
      
         <div class=" row align-items-center justify-content-center d-flex">
         <div class = "col rewind-form-container">
-        <form action="{% url 'rewindbooking' %}" method="post">
+      
+        <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
             {% csrf_token %}
             {{ form.as_p }}
+            
             <button type = "submit" class="btn btn-dark"> Submit</button>
         </form>
         
@@ -80,7 +82,9 @@
         </div>
         </div>
 
-
+        <script>
+           
+        </script>
 
    <footer>
 
