@@ -8,7 +8,9 @@ from django.contrib.auth.models import User
 
 def update_booking(request, booking_id):
     booking = rewind.objects.get(pk=booking_id)
-    return render(request, 'programmes/update_booking.html', {'booking': booking})
+    form = rewind_form(request.POST or None)
+
+    return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
 
 def rewindbooking(request):
 
