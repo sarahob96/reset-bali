@@ -233,3 +233,6 @@ div#map {min-height: 360px;}
     padding-top:40px;
 }
 
+#map{
+    min-height: 360px;
+}
