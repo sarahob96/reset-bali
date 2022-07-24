@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
+def update_booking(request, booking_id):
+    booking = rewind.objects.get(pk=booking_id)
+    return render(request, 'programmes/update_booking.html', {'booking': booking})
 
 def rewindbooking(request):
 

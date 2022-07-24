@@ -24,9 +24,9 @@
             <td>{{ booking.programme }}</td>
             <td>{{ booking.date }}</td>
             <td>{{ booking.status }}</td>
-            <td> <i class="fa-solid fa-trash-can"></i><i class="fa-solid fa-pen-to-square"></i>
+            <td> <i class="fa-solid fa-trash-can"></i><a href="{% url 'update_booking' booking.id %}"><i class="fa-solid fa-pen-to-square"></i></a>
             </td>
-            
+   
           </tr>
         
          {% endfor %}
