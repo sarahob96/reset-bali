@@ -6,6 +6,10 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
+def delete_booking(request, booking_id):
+    booking = rewind.objects.get(pk=booking_id)
+    booking.delete()
+
 def update_booking(request, booking_id):
     booking = rewind.objects.get(pk=booking_id)
     form = rewind_form(request.POST or None, instance=booking)
