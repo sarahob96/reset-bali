@@ -3,9 +3,11 @@
 
 {% block content %}
 
-       <h2>  {{ user.username }}'s Profile </h2>
- 
-       <p> <a href="{% url 'mybookings' %}"> view bookings </a></p>
 
+       <div>
+       <h2 class="text-centre" >  {{ user.username }}'s Profile </h2>
+
+       <p> <a href="{% url 'mybookings' %}"> view bookings </a></p>
+       </div>
 
 {% endblock %}

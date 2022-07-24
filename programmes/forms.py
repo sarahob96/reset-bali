@@ -6,4 +6,4 @@ class rewind_form(forms.ModelForm):
     """
     class Meta:
         model = rewind
-        fields = ['programme', 'date', 'email', 'phone']
+        fields = ['user','programme', 'date', 'email', 'phone']

@@ -13,8 +13,7 @@
         <div class = "col rewind-form-container">
       
         <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
-            {% csrf_token %}
-          <label for="username"> Username: </label>  {{user.username}}
+            {% csrf_token %} 
             
             {{ form.as_p }}
            
