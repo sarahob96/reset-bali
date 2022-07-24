@@ -8,7 +8,10 @@ from django.contrib.auth.models import User
 
 def update_booking(request, booking_id):
     booking = rewind.objects.get(pk=booking_id)
-    form = rewind_form(request.POST or None)
+    form = rewind_form(request.POST or None, instance=booking)
+    if form.is_valid():
+        form.save()
+        return redirect('mybookings')
 
     return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
 
