@@ -11,6 +11,7 @@ body{
     height:80px;
     width: 100%;
     z-index: 2;
+    padding-bottom:20px;
 }
 
 .main-navbar:after{
@@ -118,13 +119,6 @@ body{
     object-fit: cover;
 }
 
-.review-form-container{
-    background-color: #E8E8E8;
-    width: 50%;
-    border-radius: 25px;
-    padding: 20px;
-}
-
 .rewind-form-container{
     background-color: #E8E8E8;
     width: 50%;
@@ -227,3 +221,15 @@ div#map {min-height: 360px;}
     bottom:-8%;
 
 }
+.contact-form-container{
+    margin-top: 10px;
+    background-color: #E8E8E8;
+    border-radius: 25px;
+    padding:15px;
+    
+}
+
+.contact-details-container{
+    padding-top:40px;
+}
+
