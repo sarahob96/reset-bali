@@ -32,13 +32,19 @@
                     
                         {% for review in reviews %}
                     <div>
+                        <p> 
+                            {{ review.title }}
+                        </p>
                         <p>
                             {{ review.your_experience }}
                         </p>
-        
-                        <p> {{ review.name }}</p>
+                        <p>
+                             {{review.rating}}
+                        </p>
+                     
                         <p class="font-weight-bold text-uppercase"> programme: {{ review.programme_attended }} </p>
-                       </div>
+                       <p> Posted by <span class="font-italic"> {{review.name}}</span> on {{review.date}} </p>
+                        </div>
                         {% endfor %} 
                        
                 </div>
