@@ -39,7 +39,7 @@
                             {{ review.your_experience }}
                         </p>
                         <p>
-                             {{review.rating}}
+                            <i class="fa-solid fa-star"></i>  {{review.rating}} / 5
                         </p>
                      
                         <p class="font-weight-bold text-uppercase"> programme: {{ review.programme_attended }} </p>
@@ -82,7 +82,7 @@
             $(".testimonial-text").owlCarousel({
                 loop: true,
                 autoplay: true,
-                autoplayTimeout: 2000,
+                autoplayTimeout: 3000,
                 autoplayHoverPause: true,
                 items:1,
             });
