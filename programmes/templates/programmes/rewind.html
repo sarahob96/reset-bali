@@ -5,32 +5,34 @@
 {% block content %}
 
 
-        <div class="rewind-form float-left">
-              
-            <h5 class="m-4 text-center"> Summer 2022 booked out, enquire now for 2023. </h5>
-     
-        <div class=" row align-items-center justify-content-center d-flex">
-        <div class = "col rewind-form-container">
-      
-        <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
-            {% csrf_token %} 
-            
-            {{ form.as_p }}
-           
-            <button type = "submit" class="btn btn-dark"> Submit</button>
-        </form>
-        
+<div class="rewind-form float-left">
+
+    <h5 class="m-4 text-center"> Summer 2022 booked out, enquire now for 2023. </h5>
+    {% if user.is_authenticated %}
+    <div class=" row align-items-center justify-content-center d-flex">
+        <div class="col rewind-form-container">
+
+            <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button type="submit" class="btn btn-dark"> Submit</button>
+            </form>
+            {% else %}
+            <div>
+                <a href="{% url 'login'%}"> Login </a> or <a href="{% url 'register'%}">Register </a> an account to book
+                now
+            </div>
+            {% endif %}
         </div>
-       
-        </div>
-        
-    </div>
+
         <div class="col programme-img-div">
-               
-                <img src="{%static 'images/rewind.png'%}" class = "programme-img">     
 
+            <img src="{%static 'images/rewind.png'%}" class="programme-img">
         </div>
-        </div>
+    </div>
+</div>
 
-      
-   {% endblock %}
+
+{% endblock %}

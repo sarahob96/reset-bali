@@ -2,13 +2,14 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import rewind_form
 from .models import rewind
 from django.contrib.auth.models import User
-
+from django.contrib.auth import get_user
 
 # Create your views here.
 
 def delete_booking(request, booking_id):
     booking = rewind.objects.get(pk=booking_id)
     booking.delete()
+    return redirect('mybookings')
 
 def update_booking(request, booking_id):
     booking = rewind.objects.get(pk=booking_id)
@@ -20,7 +21,7 @@ def update_booking(request, booking_id):
     return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
 
 def rewindbooking(request):
-
+    
     form = rewind_form()     
     if request.method == 'POST':
         rewind_fields = {
@@ -31,18 +32,23 @@ def rewindbooking(request):
             'phone': request.POST['phone'],
         
         }
+       
         form = rewind_form(rewind_fields)
-   
+
         if form.is_valid():
             form.save()
+    else:
+        user = get_user(request)
+        form = rewind_form(initial={'user': user})
+       
+        return render(request, "programmes/rewind.html", {'form': form})
    
-        
-    return render(request, "programmes/rewind.html", {'form': form})
 
 def my_bookings(request):
     
     bookings = rewind.objects.filter(user=request.user)
     return render(request, 'programmes/bookings.html', {'bookings': bookings})
+ 
 
 def rewind_page(request):
     return render(request, 'programmes/rewind.html')
