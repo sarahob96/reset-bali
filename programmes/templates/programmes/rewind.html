@@ -4,6 +4,7 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %} 
 
 <div class="rewind-form float-left">
 
@@ -15,7 +16,7 @@
             <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
                 {% csrf_token %}
 
-                {{ form.as_p }}
+                {{ form|crispy }}
 
                 <button type="submit" class="btn btn-dark"> Submit</button>
             </form>
