@@ -7,13 +7,15 @@
 {% load crispy_forms_tags %} 
 
 <div class="rewind-form float-left">
-
-    <h5 class="m-4 text-center"> Summer 2022 booked out, enquire now for 2023. </h5>
+    <hr>
+    <h5 class="m-4 text-center"> Summer 2022 is booked out, enquire now for 2023. </h5>
+    <hr>
     {% if user.is_authenticated %}
     <div class=" row align-items-center justify-content-center d-flex">
         <div class="col rewind-form-container">
 
             <form action="{% url 'rewindbooking' %}" method="post" id="programmeForm">
+                <h4 class="text-center"> Booking form </h4>
                 {% csrf_token %}
 
                 {{ form|crispy }}

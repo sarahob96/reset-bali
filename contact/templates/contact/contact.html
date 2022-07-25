@@ -3,8 +3,8 @@
 {% block content %}
 {% load crispy_forms_tags %} 
         <div>
-               <div class="row contact-details-container">
-                <div class="col-6 text-center">
+               <div class="contact-details-container">
+                <div class="text-center">
                     <h3> Our details </h3>
                     <hr class="w-50 hr">
                         <p>Phone: +62 877 8722 2220  </p>
@@ -14,10 +14,11 @@
                     
 
                 </div>
-                <div class="contact-us">
+                <div class="contact-us ">
               
                    
                     <h3 class = "text-center"> Get in touch </h3>
+                    <hr class="w-50"> 
                     <div class="align-items-center justify-content-center d-flex">
                     <div class = "contact-form-container">
                     <form action="{% url 'form_contact'%}" method="post">
