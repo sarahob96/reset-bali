@@ -49,6 +49,3 @@ class rewind(models.Model):
     phone = models.IntegerField()
     email = models.EmailField(max_length=50)
 
-class booking(models.Model):
-    booking_spaces = models.IntegerField()
-    

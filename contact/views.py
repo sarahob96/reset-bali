@@ -23,6 +23,7 @@ def form_contact(request):
    
         if form.is_valid():
             form.save()
+            form = contact_form()
 
            # try: 
                ### send_mail(subject="hello", message="hello", 'admin@resetbali.com', ['sarahobrien15@gmail.com'])

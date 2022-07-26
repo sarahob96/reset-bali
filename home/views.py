@@ -29,6 +29,7 @@ def form_review(request):
    
         if form.is_valid():
             form.save()
+            form=ReviewForm()
             messages.success(request, 'Thanks, your review has been posted!')
         else:
             messages.error(request, 'failed to post review, please ensure all fields are filled in accurately')

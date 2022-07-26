@@ -36,27 +36,19 @@ def rewindbooking(request):
         form = rewind_form(rewind_fields)
 
         if form.is_valid():
-            rewind_form.instance.user = request.user.username
             form.save()
+            form = rewind_form()
     else:
         user = get_user(request)
         form = rewind_form(initial={'user': user})
        
-        return render(request, "programmes/rewind.html", {'form': form})
+    return render(request, "programmes/rewind.html", {'form': form})
    
 
 def my_bookings(request):
     
     bookings = rewind.objects.filter(user=request.user)
     return render(request, 'programmes/bookings.html', {'bookings': bookings})
- 
-
-
-
-
-
-
-
 
 def rewind_page(request):
     return render(request, 'programmes/rewind.html')
@@ -76,6 +68,3 @@ def ubud(request):
 
 def seminyak(request):
     return render(request, 'programmes/seminyak.html')
-
-
-

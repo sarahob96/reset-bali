@@ -263,5 +263,25 @@ div#map {min-height: 360px;}
 
 .booking-table-container{
     padding:20px;
+
+}
+
+i{
+    padding-left: 25px;
+    color:black;
     
+}
+i:hover{
+    color:lightcoral;
+}
+.delete:hover{
+    color:red;
+}
+
+.modify:hover{
+    color:blue;
+}
+
+.a{
+    text-decoration: none;
 }
