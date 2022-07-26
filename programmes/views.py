@@ -51,6 +51,13 @@ def my_bookings(request):
     return render(request, 'programmes/bookings.html', {'bookings': bookings})
  
 
+
+
+
+
+
+
+
 def rewind_page(request):
     return render(request, 'programmes/rewind.html')
 

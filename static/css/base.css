@@ -260,3 +260,8 @@ div#map {min-height: 360px;}
 .display{
     display:block;
 }
+
+.booking-table-container{
+    padding:20px;
+    
+}

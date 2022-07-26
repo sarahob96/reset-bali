@@ -45,7 +45,10 @@ class rewind(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Rewind")
     date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
-    email = models.EmailField(max_length=50)
-    phone = models.IntegerField()
     status = models.CharField(max_length=10, choices=booking_status, default="pending")
+    phone = models.IntegerField()
+    email = models.EmailField(max_length=50)
 
+class booking(models.Model):
+    booking_spaces = models.IntegerField()
+    
