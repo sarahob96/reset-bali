@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+global user
+
 def login_form(request):
     if request.method == "POST":
         username = request.POST['username']

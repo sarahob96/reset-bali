@@ -36,6 +36,7 @@ def rewindbooking(request):
         form = rewind_form(rewind_fields)
 
         if form.is_valid():
+            rewind_form.instance.user = request.user.username
             form.save()
     else:
         user = get_user(request)

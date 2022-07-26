@@ -256,3 +256,7 @@ div#map {min-height: 360px;}
     object-position: center;
    
 }
+
+.display{
+    display:block;
+}

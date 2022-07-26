@@ -19,7 +19,7 @@ def form_review(request):
     form = ReviewForm()
     if request.method == 'POST':
         review_fields = {
-            'title': request.POST['title'],
+            
             'name': request.POST['name'],
             'rating': request.POST['rating'],
             'programme_attended': request.POST['programme_attended'],
@@ -29,6 +29,9 @@ def form_review(request):
    
         if form.is_valid():
             form.save()
+            messages.success(request, 'Thanks, your review has been posted!')
+        else:
+            messages.error(request, 'failed to post review, please ensure all fields are filled in accurately')
 
     reviews = Review.objects.all()
     return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
