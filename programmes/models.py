@@ -36,13 +36,16 @@ dates_renew = (
         ("20/08/2023-27/08/2023", "20/08/2023-27/08/2023"),
         
 )
+
+
 class rewind(models.Model):
     """
     """
     PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
-    programme = models.CharField(max_length=20, choices=PROGRAMMES, default="Rewind")
-    date = models.CharField(max_length=50, choices=dates_rewind, default="05/05/2023-08/05/2023")
+    programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Rewind")
+    date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
     email = models.EmailField(max_length=50)
     phone = models.IntegerField()
+    status = models.CharField(max_length=10, choices=booking_status, default="pending")
 
