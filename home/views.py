@@ -32,7 +32,8 @@ def form_review(request):
    
         if form.is_valid():
             form.save()
-            form=ReviewForm()
+            name = get_user(request)
+            form = ReviewForm(initial={'name': name})
             
     else: 
         name = get_user(request)

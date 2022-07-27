@@ -42,7 +42,7 @@ class rewind(models.Model):
     """
     """
     PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
-    user = models.CharField(max_length=20)
+    user = models.CharField(max_length=20, null=True) 
     programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Rewind")
     date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
     status = models.CharField(max_length=10, choices=booking_status, default="pending")
