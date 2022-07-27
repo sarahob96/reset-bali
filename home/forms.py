@@ -5,6 +5,10 @@ from .models import Review
 class ReviewForm(forms.ModelForm):
     """
     """
+    def __init__(self, *args, **kwargs):
+       super(ReviewForm, self).__init__(*args, **kwargs)
+       self.fields['name'].widget.attrs['readonly'] = True
+
     class Meta:
         model = Review
-        fields = [ 'name', 'programme_attended', 'your_experience', 'rating']
+        fields = ['name', 'programme_attended', 'your_experience', 'rating']

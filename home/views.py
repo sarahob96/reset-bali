@@ -4,6 +4,8 @@ from .models import Review
 from django.views.generic import DeleteView
 from django.contrib import messages 
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user
 
 # Create your views here.
 
@@ -15,8 +17,9 @@ def homepage(request):
 def form_review(request):
     """
     """
-   
+
     form = ReviewForm()
+   
     if request.method == 'POST':
         review_fields = {
             
@@ -30,9 +33,12 @@ def form_review(request):
         if form.is_valid():
             form.save()
             form=ReviewForm()
-            messages.success(request, 'Thanks, your review has been posted!')
-        else:
-            messages.error(request, 'failed to post review, please ensure all fields are filled in accurately')
+            
+    else: 
+        name = get_user(request)
+        form = ReviewForm(initial={'name': name})
+       
+            
 
     reviews = Review.objects.all()
     return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
