@@ -21,10 +21,10 @@
                     <hr class="w-50"> 
                     <div class="align-items-center justify-content-center d-flex">
                     <div class = "contact-form-container">
-                    <form action="{% url 'form_contact'%}" method="post">
+                    <form action="{% url 'form_contact'%}" method="post" id="contact-post">
                         {% csrf_token %}
                         {{ form|crispy }}
-                        <button type = "submit" class="btn btn-dark"> Submit</button>
+                        <button type = "submit" class="btn btn-dark" data-toggle="modal" data-target="contactModal" aria-labelledby="thanks-modal" aria-hidden="true"> Submit </button>
                     </form>
         
                     </div>
@@ -33,8 +33,39 @@
                 </div>
                </div>
         </div>
-       
+        <div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> Thanks for contacting us!</h5>
+                    <button type="button" id="contact-button-close" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p class="font-italic"> Someone from our Reset Bali team will be in touch with you ASAP</p> 
+                    <p class="font-italic"> If you want to book with us, view our locations and programmes <a href="{ url 'locations'}">here </a></p>
+                     
+                  </div>
+
+                </div>
+              </div>
+        </div>
       
+<script>
+            document.getElementById("contact-button-close").onclick = function() {
+                location.href= "{% url 'form_contact' %}";
+            }
+</script>
+<script>
+            $('#contact-post').on('submit', function(e){
+            $('#contactModal').modal('show');
+            e.preventDefault();
+                        
+        });
+</script>
+
+
 <script>
 
 
