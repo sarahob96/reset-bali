@@ -136,7 +136,7 @@ body{
     width: 50%;
     border-radius: 25px;
     padding: 30px;
-    margin-left: 30px;
+ 
 }
 
 .social-links>li {
@@ -191,7 +191,12 @@ object-fit: contain;
  
 
 }
+.form-login-container{
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #E8E8E8;
 
+}
 .retreat-heading{
 
     padding-top: 30px;
@@ -220,7 +225,7 @@ div#map {min-height: 360px;}
     float: right;
     margin-top: 30px;
     margin-right: 100px;
-    width:35%;
+    width:80%;
 
 }
 
@@ -231,7 +236,12 @@ div#map {min-height: 360px;}
 
 .user-caption{
     float:right;
-    bottom:-8%;
+    right:-100px;
+    bottom: -30px;
+    padding:0;
+    left:0;
+
+
 
 }
 .contact-us{
@@ -292,4 +302,24 @@ i:hover{
 
 .seminyak-heading{
     padding-bottom: 30px;
+}
+
+.schedule-text{
+    top:0;
+
+}
+.menu-button{
+    color:black;
+}
+
+.login-tagline{
+    padding-top:10px;
+}
+
+.login-btn{
+    margin-top:20px;
+}
+
+.login-h2{
+    padding-top:30px;
 }

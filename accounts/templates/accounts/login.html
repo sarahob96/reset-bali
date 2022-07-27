@@ -5,7 +5,7 @@
 
 
     <div class = "login-form">
-    <h1 class="text-center"> Login here </h1>
+    <h2 class="text-center login-h2"> Login here </h2>
     
             <div class = "align-items-center justify-content-center d-flex">
             <div class="form-login-container border m-4">
@@ -19,12 +19,12 @@
             <label for="password"> Password </label>
             <input type="password" name="password">
         </div>
-        <input type = "submit">
+        <button class="btn btn-dark login-btn" type = "submit"> Login</button>
     </form>
      
 
-            <div>
-        <p> Don't have an account with us? <a href="{% url 'register' %}"> Sign up</a> </p>
+        <div>
+        <p class="login-tagline"> Don't have an account with us? <a href="{% url 'register' %}"> Sign up</a> </p>
     </div>
     </div>
     </div>

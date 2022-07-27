@@ -6,16 +6,16 @@
 
 {% load crispy_forms_tags %} 
 
-<div class="rewind-form float-left">
+<div class="rewind-form float-left container-fluid">
     <hr>
     <h5 class="m-4 text-center"> Summer 2022 is booked out, enquire now for 2023. </h5>
     <hr>
     {% if user.is_authenticated %}
     <div class=" row align-items-center justify-content-center d-flex">
-        <div class="col rewind-form-container">
+        <div class="col-6 rewind-form-container">
 
             <form action="{% url 'rewindbooking' %}" method="post" id="rewindForm">
-                <h4 class="text-center"> Booking form </h4>
+                <h4 class="text-center"> Rewind - Booking form </h4>
                 {% csrf_token %}
 
                 {{ form|crispy }}
@@ -30,9 +30,10 @@
             {% endif %}
         </div>
 
-        <div class="col programme-img-div">
-
+        <div class="col-6 programme-img-div">
+            
             <img src="{%static 'images/rewind.png'%}" class="programme-img">
+            <h5 class="carousel-caption text-black-50 schedule-text"> Our 2022 schedule </h5>
         </div>
     </div>
 </div>

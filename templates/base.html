@@ -30,17 +30,18 @@
 
 <body class="h-100">
 
-
-    <nav class="navbar main-navbar navbar-expand-md text-center">
-        <div class="container-fluid">
-            <div class="navbar-header">
-            <a class="navbar-brand nav-icon " href="{% url 'home' %}"> <h2> Reset Bali </h2> </a>
-            </div>
-
-            <ul class="list-unstyled nav navbar-nav p-4 text-center">
-                <li class="p-2 active"><a href="{% url 'home' %}"> Home</a></li>
-                <li class="p-2 has-children dropdown">
-                    <a href="{% url 'locations' %}" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
+<div class="container-fluid">
+    <nav class="navbar main-navbar navbar-expand-lg text-center">
+        <a class="navbar-brand nav-icon " href="{% url 'home' %}"> <h2> Reset Bali </h2> </a>
+        <button class="navbar-toggler menu-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+        </button>
+        
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="list-unstyled nav navbar-nav p-4 text-center mr-auto">
+                <li class="p-2 active nav-item"><a href="{% url 'home' %}"> Home</a></li>
+                <li class="p-2 has-children dropdown nav-item">
+                    <a class="nav-link" href="{% url 'locations' %}" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>
                 
                         <ul class="list-unstyled">
                             <li><a href="{% url 'rewindbooking' %}"> Rewind </a></li>
@@ -64,6 +65,7 @@
         </div>
     </nav>
         
+    </div>
       {% block content %}
 
       {% endblock%}
