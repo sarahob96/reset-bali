@@ -323,3 +323,11 @@ i:hover{
 .login-h2{
     padding-top:30px;
 }
+
+.register-form-heading{
+    padding-top:40px;
+    padding-bottom: 10px;
+}
+.registration-btn{
+    margin-bottom:20px;
+}

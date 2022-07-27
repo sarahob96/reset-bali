@@ -1,19 +1,20 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %} 
 {% block content %}
 
     <div class = "login-form">
-    <h1 class="text-center"> Register to become part of the Reset Bali community  </h1>
+    <h2 class="text-center register-form-heading"> Register to become part of the Reset Bali community  </h2>
     
     <div class = "align-items-center justify-content-center d-flex">
         <div class="form-login-container border m-4">
 
     <form action = "" method = "post">
         {% csrf_token %}
-        {{ form.as_p}}
+        {{ form|crispy}}
 
 
-        <input type = "submit" name = "Register now">
+        <button class="btn btn-dark registration-btn" type = "submit"> Register now</button>
+
     </form>
 
     <div>
