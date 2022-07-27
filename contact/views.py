@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .forms import contact_form
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
+from django.contrib.auth import get_user
+
 # Create your views here.
 
 
@@ -24,11 +26,12 @@ def form_contact(request):
         if form.is_valid():
             form.save()
             form = contact_form()
+    
+    else:
+        if request.user.is_authenticated:
+            name = get_user(request)
+            form = contact_form(initial={'name': name})
 
-           # try: 
-               ### send_mail(subject="hello", message="hello", 'admin@resetbali.com', ['sarahobrien15@gmail.com'])
-           ## except BadHeaderError:
-            #    return HttpResponse('invalid')
     return render(request, "contact/contact.html", {'form': form})
 
 
