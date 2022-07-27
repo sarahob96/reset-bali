@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from programmes.views import rewindbooking
+
 
 # Create your views here.
 
@@ -7,3 +7,4 @@ from programmes.views import rewindbooking
 def profiles(request):
 
     return render(request, 'profiles/profile.html')
+

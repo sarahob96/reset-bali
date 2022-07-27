@@ -13,6 +13,19 @@ def homepage(request):
 
     return render(request, 'home_page/index.html')
 
+def delete_review(request, review_id):
+    all_reviews = Review.objects.get(pk=review_id)
+    all_reviews.delete()
+    return redirect('myreviews')
+
+def update_review(request, review_id):
+    all_reviews = Review.objects.get(pk=review_id)
+    form = ReviewForm(request.POST or None, instance=all_reviews)
+    if form.is_valid():
+        form.save()
+        return redirect('myreviews')
+
+    return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
 
 def form_review(request):
     """
@@ -39,8 +52,11 @@ def form_review(request):
         name = get_user(request)
         form = ReviewForm(initial={'name': name})
        
-            
-
     reviews = Review.objects.all()
     return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
 
+
+def my_reviews(request):
+    
+    all_reviews = Review.objects.filter(name=request.user)
+    return render(request, 'home_page/myreviews.html', {'all_reviews': all_reviews})

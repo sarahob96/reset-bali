@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+      
+        <h4> Your Reviews  </h4>
+       <div class="reviews-table-container">
+        <table class="table table-hover table-striped ">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Programme</th>
+            <th scope="col">Date</th>
+            <th scope="col">rating</th>
+            <th scope="col">Review</th>
+            <th scope="col">Delete/Modify</th>
+          </tr>
+        </thead>
+            {% for review in all_reviews %}
+           
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+    
+            <td>{{ review.programme_attended }}</td>
+            <td>{{ review.date }}</td>
+            <td>{{ review.rating }}</td>
+            <td>{{ review.your_experience }}</td>
+
+   
+          </tr>
+        
+         {% endfor %}
+        </tbody>
+        </table>
+       </div>
+       
+       
+{% endblock %}
