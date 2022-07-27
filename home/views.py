@@ -9,6 +9,8 @@ from django.contrib.auth import get_user
 
 # Create your views here.
 
+review_modal = False
+
 def homepage(request):
 
     return render(request, 'home_page/index.html')
@@ -25,7 +27,7 @@ def update_review(request, review_id):
         form.save()
         return redirect('myreviews')
 
-    return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
+    return render(request, 'home_page/update_review.html', {'all_reviews': all_reviews, 'form':form})
 
 def form_review(request):
     """
@@ -47,13 +49,14 @@ def form_review(request):
             form.save()
             name = get_user(request)
             form = ReviewForm(initial={'name': name})
+          
             
     else: 
         name = get_user(request)
         form = ReviewForm(initial={'name': name})
        
     reviews = Review.objects.all()
-    return render(request, "home_page/index.html", {'reviews': reviews, 'form': form})
+    return render(request, "home_page/index.html", {'reviews': reviews, 'form':form })
 
 
 def my_reviews(request):

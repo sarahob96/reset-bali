@@ -37,7 +37,8 @@ def rewindbooking(request):
 
         if form.is_valid():
             form.save()
-            form = rewind_form()
+            user = get_user(request)
+            form = rewind_form(initial={'user': user})
     else:
         user = get_user(request)
         form = rewind_form(initial={'user': user})

@@ -28,7 +28,8 @@
             <td>{{ review.rating }}</td>
             <td>{{ review.your_experience }}</td>
 
-   
+            <td> <a href="{% url 'delete_review' review.id %}"> <i class="delete fa-solid fa-trash-can"></i> </a><a href="{% url 'update_review' review.id %}"><i class="modify fa-solid fa-pen-to-square"></i></a>
+            </td>
           </tr>
         
          {% endfor %}

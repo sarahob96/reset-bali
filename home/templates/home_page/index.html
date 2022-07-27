@@ -80,6 +80,7 @@
             </div>
   
         </div> 
+        <input type="hidden" id="review_modal" value="{{ review_modal }}" />
         <div class="modal" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -100,17 +101,14 @@
         </div>
 
 <script>
-    document.getElementById("button-close").onclick = function() {
-        location.href= "{% url 'home' %}";
-    }
+ $(document).ready(function(){
+            
+    if ($('#review_modal').val() == "True") {
+        $('#reviewModal').modal();
+         }
+    });
 </script>
-<script>
-            $('#reviewPost').on('submit', function(e){
-                 $('#reviewModal').modal('show');
-                 e.preventDefault();
-                
-});
-</script>
+
  <script>
             $(".testimonial-text").owlCarousel({
                 loop: true,

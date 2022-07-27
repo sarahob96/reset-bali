@@ -45,7 +45,16 @@ class rewind(models.Model):
     user = models.CharField(max_length=20, null=True) 
     programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Rewind")
     date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
-    status = models.CharField(max_length=10, choices=booking_status, default="pending")
+    if programme.choices == "Rewind":
+        date.choices = dates_rewind
+    else:
+      if programme.choices == "Renew":
+        date.choices = dates_renew
+      else:  
+       if programme.choices == "restart":
+        date.choices = dates_restart
+
+    status = models.CharField(max_length=10, choices=booking_status, default="approved")
     phone = models.IntegerField()
     email = models.EmailField(max_length=50)
 

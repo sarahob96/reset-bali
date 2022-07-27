@@ -7,6 +7,7 @@
 {% load crispy_forms_tags %} 
 
 <div class="rewind-form float-left container-fluid">
+    <input type="hidden" id="rewind_modal" value="{{ rewind_modal }}" />
     <hr>
     <h5 class="m-4 text-center"> Summer 2022 is booked out, enquire now for 2023. </h5>
     <hr>
@@ -58,6 +59,15 @@
 </div>
 
 <script>
+    $(document).ready(function(){
+               
+       if ($('#rewind_modal').val() == "True") {
+           $('#rewindwModal').modal();
+            }
+       });
+   </script>
+<!---
+<script>
     document.getElementById("rewind-button-close").onclick = function() {
         location.href= "{% url 'rewindbooking' %}";
     }
@@ -68,5 +78,5 @@
     e.preventDefault();
                 
 });
-</script>
+</script> --->
 {% endblock %}
