@@ -71,24 +71,42 @@
 
     function initMap(){
         var map = new google.maps.Map(document.getElementById("map"),{
-            zoom: 4,
+            zoom: 8,
             center: {
                 lat:  -8.409518,
                 lng:  115.188919
             }
         });
-        new google.maps.Marker({
-            position : {lat:-8.5069 ,lng:115.2625}, map,
-            title: "UBUD",
-        })
-        new google.maps.Marker({
-            position : {lat:-8.6913,lng:115.1682}, map,
-            title: "SEMINYAK",
+    
+        var ubud = new google.maps.Marker({
+            position : {lat:-8.5069 ,lng:115.2625},
+            map:map,
+        
+        });
+       
+        var infowindow = new google.maps.InfoWindow({
+            content: "Our Ubud location - Rewind and Restart"
+        });
 
-        })
+        ubud.addListener('click', function() { 
+            infowindow.open(map, ubud);
+            });
+
+        var seminyak = new google.maps.Marker({
+            position : {lat:-8.6913,lng:115.1682},
+            map:map,       
+        }); 
+
+        var infowindow2  = new google.maps.InfoWindow({
+            content: "Our Seminyak location - Renew"
+        });
+
+        seminyak.addListener('click', function() {
+            infowindow2.open(map, seminyak);
+        });
     }
-   
 </script>
+
 <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGIUweH84pCcagHcAAiDIzHyPZ7WiLPQU&callback=initMap"></script>
 
