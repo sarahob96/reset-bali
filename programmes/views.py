@@ -120,11 +120,13 @@ def restartbooking(request):
             form.save()
             user = get_user(request)
             form = Restart_form(initial={'user': user})
+            
     else:
         user = get_user(request)
         form = Restart_form(initial={'user': user})
        
     return render(request, "programmes/restart.html", {'form': form})
+
 
 def my_bookings(request):
     
@@ -155,3 +157,6 @@ def ubud(request):
 
 def seminyak(request):
     return render(request, 'programmes/seminyak.html')
+
+def booking_confirmation(request):
+    return render(request, 'programmes/booking-confirmation.html')

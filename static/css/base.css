@@ -363,3 +363,15 @@ i:hover{
     padding-top:10px;
     padding-bottom:10px ;
 }
+
+.confirmation-heading{
+    padding:20px;
+}
+
+.confirmation-tagline{
+    padding:20px;
+}
+
+.confirmation-para{
+    padding-top:20px;
+}
