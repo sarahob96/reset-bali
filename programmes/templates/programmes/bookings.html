@@ -21,12 +21,14 @@
           </tr>
         </thead>
             {% for booking in bookings %}
+            
            
         <tbody>
           <tr>
             <th scope="row"></th>
     
-            <td>{{ booking.programme }}</td>
+            <td>{{ booking.programme }}
+            </td>
             <td>{{ booking.date }}</td>
             <td>{{ booking.status }}</td>
             <td> <a href="{% url 'delete_booking' booking.id %}"> <i class="delete fa-solid fa-trash-can"></i> </a><a href="{% url 'update_booking' booking.id %}"><i class="modify fa-solid fa-pen-to-square"></i></a>
@@ -35,6 +37,42 @@
           </tr>
         
          {% endfor %}
+
+         {% for booking in bookings_renew %}
+            
+           
+         <tbody>
+           <tr>
+             <th scope="row"></th>
+     
+             <td>{{ booking.programme }}
+             </td>
+             <td>{{ booking.date }}</td>
+             <td>{{ booking.status }}</td>
+             
+             </td>
+    
+           </tr>
+         
+          {% endfor %}
+
+          {% for booking in bookings_restart %}
+            
+           
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+      
+              <td>{{ booking.programme }}
+              </td>
+              <td>{{ booking.date }}</td>
+              <td>{{ booking.status }}</td>
+              
+              </td>
+     
+            </tr>
+          
+           {% endfor %}
         </tbody>
         </table>
        </div>

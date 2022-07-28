@@ -1,28 +1,29 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import rewind_form, renew_form, restart_form
-from .models import rewind, renew, restart
+from .forms import Rewind_form, Renew_form, Restart_form
+from .models import Rewind, Renew, Restart
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user
 
 # Create your views here.
 
 def delete_booking(request, booking_id):
-    booking = rewind.objects.get(pk=booking_id)
+    booking = Rewind.objects.get(pk=booking_id)
     booking.delete()
     return redirect('mybookings')
 
 def update_booking(request, booking_id):
-    booking = rewind.objects.get(pk=booking_id)
-    form = rewind_form(request.POST or None, instance=booking)
+    booking = Rewind.objects.get(pk=booking_id)
+    form = Rewind_form(request.POST or None, instance=booking)
     if form.is_valid():
         form.save()
         return redirect('mybookings')
 
     return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
 
+
 def rewindbooking(request):
     
-    form = rewind_form()     
+    form = Rewind_form()     
     if request.method == 'POST':
         rewind_fields = {
             'user': request.POST['user'],
@@ -33,21 +34,22 @@ def rewindbooking(request):
         
         }
        
-        form = rewind_form(rewind_fields)
+        form = Rewind_form(rewind_fields)
 
         if form.is_valid():
             form.save()
             user = get_user(request)
-            form = rewind_form(initial={'user': user})
+            form = Rewind_form(initial={'user': user})
     else:
         user = get_user(request)
-        form = rewind_form(initial={'user': user})
+        form = Rewind_form(initial={'user': user})
        
     return render(request, "programmes/rewind.html", {'form': form})
+
    
 def renewbooking(request):
     
-    form = renew_form()  
+    form = Renew_form()  
     if request.method == 'POST':
         renew_fields = {
             'user': request.POST['user'],
@@ -58,21 +60,22 @@ def renewbooking(request):
         
         }
        
-        form = renew_form(renew_fields)
+        form = Renew_form(renew_fields)
 
         if form.is_valid():
             form.save()
             user = get_user(request)
-            form = renew_form(initial={'user': user})
+            form = Renew_form(initial={'user': user})
     else:
         user = get_user(request)
-        form = renew_form(initial={'user': user})
+        form = Renew_form(initial={'user': user})
        
     return render(request, "programmes/renew.html", {'form': form})
 
+
 def restartbooking(request):
     
-    form = restart_form()  
+    form = Restart_form()  
     if request.method == 'POST':
         restart_fields = {
             'user': request.POST['user'],
@@ -83,24 +86,30 @@ def restartbooking(request):
         
         }
        
-        form = restart_form(restart_fields)
+        form = Restart_form(restart_fields)
 
         if form.is_valid():
             form.save()
             user = get_user(request)
-            form = restart_form(initial={'user': user})
+            form = Restart_form(initial={'user': user})
     else:
         user = get_user(request)
-        form = restart_form(initial={'user': user})
+        form = Restart_form(initial={'user': user})
        
     return render(request, "programmes/restart.html", {'form': form})
 
 def my_bookings(request):
     
-    bookings = rewind.objects.filter(user=request.user)
-    return render(request, 'programmes/bookings.html', {'bookings': bookings})
+    bookings = Rewind.objects.filter(user=request.user)
+
+    bookings_restart = Restart.objects.filter(user=request.user)
+
+    bookings_renew = Renew.objects.filter(user=request.user)
+    
+    return render(request, 'programmes/bookings.html', {'bookings': bookings, 'bookings_restart': bookings_restart, 'bookings_renew': bookings_renew, })
 
 def rewind_page(request):
+
     return render(request, 'programmes/rewind.html')
 
 def locations(request):

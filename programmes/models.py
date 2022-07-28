@@ -36,7 +36,7 @@ dates_renew = (
 )
 
 
-class rewind(models.Model):
+class Rewind(models.Model):
     """
     """
     PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
@@ -47,7 +47,10 @@ class rewind(models.Model):
     phone = models.IntegerField()
     email = models.EmailField(max_length=50)
 
-class renew(models.Model):
+
+class Renew(models.Model):
+    """
+    """
         
     PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
     user = models.CharField(max_length=20, null=True) 
@@ -57,8 +60,10 @@ class renew(models.Model):
     phone = models.IntegerField()
     email = models.EmailField(max_length=50) 
 
-class restart(models.Model):
-     
+
+class Restart(models.Model):
+    """
+    """
     PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
     user = models.CharField(max_length=20, null=True) 
     programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Restart")

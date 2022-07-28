@@ -14,8 +14,13 @@
     <hr>
     <h5 class="m-4 text-center"> Summer 2022 is booked out, enquire now for 2023. </h5>
     <hr>
+    
     {% if user.is_authenticated %}
     <div class=" row align-items-center justify-content-center d-flex">
+
+        <div class="programme-img-div col-6">
+            <img src="{%static 'images/restart.png'%}" class = "programme-img">  
+        </div>
         <div class="col-6 rewind-form-container">
 
             <form action="{% url 'rewindbooking' %}" method="post" id="rewindForm">
@@ -35,9 +40,7 @@
         </div>
 
 
-        <div class="programme-img-div col-6">
-            <img src="{%static 'images/restart.png'%}" class = "programme-img">  
-        </div>
+       
 
     </div>
     </div>

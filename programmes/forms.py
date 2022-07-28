@@ -1,40 +1,42 @@
 from django import forms
-from .models import rewind, renew, restart
+from .models import Rewind, Renew, Restart
 
-class rewind_form(forms.ModelForm):
+
+class Rewind_form(forms.ModelForm):
     """
     """
 
     def __init__(self, *args, **kwargs):
-       super(rewind_form, self).__init__(*args, **kwargs)
+       super(Rewind_form, self).__init__(*args, **kwargs)
        self.fields['user'].widget.attrs['readonly'] = True
 
     class Meta:
-        model = rewind
-        fields = ['user', 'programme', 'date', 'email', 'phone']
-
-class renew_form(forms.ModelForm):
-    """
-    """
-
-    def __init__(self, *args, **kwargs):
-       super(renew_form, self).__init__(*args, **kwargs)
-       self.fields['user'].widget.attrs['readonly'] = True
-
-    class Meta:
-        model = renew
+        model = Rewind
         fields = ['user', 'programme', 'date', 'email', 'phone']
 
 
-class restart_form(forms.ModelForm):
+class Renew_form(forms.ModelForm):
     """
     """
 
     def __init__(self, *args, **kwargs):
-       super(restart_form, self).__init__(*args, **kwargs)
+       super(Renew_form, self).__init__(*args, **kwargs)
        self.fields['user'].widget.attrs['readonly'] = True
 
     class Meta:
-        model = restart
+        model = Renew
+        fields = ['user', 'programme', 'date', 'email', 'phone']
+
+
+class Restart_form(forms.ModelForm):
+    """
+    """
+
+    def __init__(self, *args, **kwargs):
+       super(Restart_form, self).__init__(*args, **kwargs)
+       self.fields['user'].widget.attrs['readonly'] = True
+
+    class Meta:
+        model = Restart
         fields = ['user', 'programme', 'date', 'email', 'phone']
 
