@@ -43,6 +43,9 @@ body{
     width: 100%;
     
 }
+.login-to-book{
+    text-align: center;
+}
 .nav-icon{
     width:30%;
     align-items: center;
@@ -264,6 +267,7 @@ div#map {min-height: 360px;}
 .contact-details-container{
     padding-top:40px;
     width:100%;
+    margin-top: 50px;
 }
 
 #map{
@@ -393,7 +397,19 @@ i:hover{
         margin:auto;
         padding-top: 20px;
     }
+    .rewind-form-container {
+        width:100%;
+        margin:10px;
 }
+.programme-img{
+    width:100%;
+    margin:0;
+}
+.contact-form-container{
+    width:100%;
+}
+}
+
 
 @media screen and (max-width: 1200px){
     .img-container{

@@ -17,7 +17,7 @@
     <hr>
     {% if user.is_authenticated %}
     <div class=" row align-items-center justify-content-center d-flex">
-        <div class="col-6 rewind-form-container">
+        <div class="col-lg-6 rewind-form-container">
 
             <form action="{% url 'rewindbooking' %}" method="post" id="rewindForm">
                 <h4 class="text-center"> Rewind - Booking form </h4>
@@ -29,13 +29,13 @@
             </form>
             {% else %}
             <div>
-                <a href="{% url 'login'%}"> Login </a> or <a href="{% url 'register'%}">Register </a> an account to book
-                now
+                <p class="login-to-book"> <a href="{% url 'login'%}"> Login </a> or <a href="{% url 'register'%}">Register </a> an account to book
+                now </p>
             </div>
             {% endif %}
         </div>
 
-        <div class="col-6 programme-img-div">
+        <div class="col-lg-6 programme-img-div">
             
             <img src="{%static 'images/rewind.png'%}" class="programme-img">
            

@@ -33,14 +33,15 @@
 <body class="h-100">
 
 <div class="container-fluid main-div">
-    <nav class="navbar main-navbar navbar-expand-lg text-center">
-        <a class="navbar-brand nav-icon " href="{% url 'home' %}"> <h2> Reset Bali </h2> </a>
-        <button class="navbar-toggler menu-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    
+    <nav class="navbar fixed-top main-navbar navbar-expand-lg text-center">
+        <a class="navbar-brand brand-text nav-icon " href="{% url 'home' %}"> <h2> Reset Bali </h2> </a>
+        <button class="navbar-toggler menu-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
         </button>
         
      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="list-unstyled nav navbar-nav p-4 text-center mr-auto">
+            <ul class="list-unstyled me-auto nav navbar-nav mb-2 mb-lg-0 text-center">
                 <li class="p-2 active nav-item"><a href="{% url 'home' %}"> Home</a></li>
                 <li class="p-2 has-children dropdown nav-item">
                     <a class="nav-link" href="{% url 'locations' %}" class="dropdown-toggle" role="button" data-bs-toggle="dropdown"> Our Programmes</a>

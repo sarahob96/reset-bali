@@ -68,6 +68,7 @@ def rewindbooking(request):
             form.save()
             user = get_user(request)
             form = Rewind_form(initial={'user': user})
+            return redirect(booking_confirmation)
     else:
         user = get_user(request)
         form = Rewind_form(initial={'user': user})
@@ -94,6 +95,7 @@ def renewbooking(request):
             form.save()
             user = get_user(request)
             form = Renew_form(initial={'user': user})
+            return redirect(booking_confirmation)
     else:
         user = get_user(request)
         form = Renew_form(initial={'user': user})
@@ -120,6 +122,7 @@ def restartbooking(request):
             form.save()
             user = get_user(request)
             form = Restart_form(initial={'user': user})
+            return redirect(booking_confirmation)
             
     else:
         user = get_user(request)
