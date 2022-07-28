@@ -41,34 +41,13 @@
         <div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title text-center" id="exampleModalLabel"> Thanks for contacting us!</h5>
-                    <button type="button" id="contact-button-close" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="font-italic text-center"> Someone from our Reset Bali team will be in touch with you ASAP</p> 
-                    <p class="font-italic text-center"> If you want to book with us, view our locations and programmes <a href="{ url 'locations'}">here </a></p>
-                     
-                  </div>
+                  
 
                 </div>
               </div>
         </div>
       
-<script>
-            document.getElementById("contact-button-close").onclick = function() {
-                location.href= "{% url 'form_contact' %}";
-            }
-</script>
-<script>
-            $('#contact-post').on('submit', function(e){
-            $('#contactModal').modal('show');
-            e.preventDefault();
-                        
-        });
-</script>
+
 
 
 <script>

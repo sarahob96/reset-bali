@@ -263,13 +263,18 @@ div#map {min-height: 360px;}
     width:50%;
     
 }
-
+.user-hero{
+    padding-right: 40px;
+}
 .contact-details-container{
     padding-top:40px;
     width:100%;
     margin-top: 50px;
 }
-
+.contact-title{
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
 #map{
     min-height: 360px;
     object-position: center;

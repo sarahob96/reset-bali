@@ -8,12 +8,15 @@
 
 {% load crispy_forms_tags %} 
         <div class = "hero" >
-            <img src="{% static '/images/hero-image.jpeg'%}"> 
             {% if user.is_authenticated %}
            
-        <h4 class="carousel-caption user-caption"> Welcome {{ user.username }} </h4>
+            <h4 class="text-center float-right user-hero"> Welcome {{ user.username }} </h4>
+            {% endif%}
+
+            <img src="{% static '/images/hero-image.jpeg'%}"> 
+           
         </div>
-        {% endif%}
+        
 
         </div>
         <div class="hero-text mb-3 p-4">

@@ -1,10 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import contact_form
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.contrib.auth import get_user
 
 # Create your views here.
+
+
+def thanks_for_contacting(request):
+    """
+    """
+    return render(request, 'contact/thanks-for-contacting.html')
 
 
 def form_contact(request):
@@ -25,7 +31,7 @@ def form_contact(request):
    
         if form.is_valid():
             form.save()
-            form = contact_form()
+            return redirect('thanks_for_contacting')
     
     else:
         if request.user.is_authenticated:
