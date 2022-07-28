@@ -62,8 +62,8 @@
                 <li class="pl-5"><a href="{% url 'profiles' %}" class="btn"> Profile </a></li>
                 <li class="pl-5"><a href="{% url 'logout' %}" class="btn"> Logout</a></li>
                 {%else%}
-                <li class="pl-5"><a href="{% url 'login' %}" class="btn btn-info"> Login</a></li>
-                <li class="p-1"><a href="{% url 'register' %}" class="btn btn-light"> Register</a></li>
+                <li class="pl-5"><a href="{% url 'login' %}" class="btn btn-light"> Login</a></li>
+                <li class="p-1"><a href="{% url 'register' %}" class="btn btn-outline-info"> Register</a></li>
                 {% endif %}
             </ul>
                 
@@ -78,7 +78,7 @@
         
       
  
-<footer>
+<footer class= "mt-auto">
         <ul class="social-links list-unstyled text-center">
             <li>
                 <a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener"
@@ -94,7 +94,7 @@
             </li>
         </ul>
         <p class="copyright text-center"> &copy; 2022 Reset Bali</p>
-    </footer>
+ </footer>
 
 
 </body>

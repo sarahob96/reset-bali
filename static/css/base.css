@@ -31,10 +31,7 @@ body{
     padding:5px;
 
 }
-.main-navbar ul li:hover a{
-    background-color: white;
-    
-}
+
 .main-navbar ul ul{
     display:none;
     position:absolute;
@@ -374,4 +371,26 @@ i:hover{
 
 .confirmation-para{
     padding-top:20px;
+}
+
+
+
+@media screen and (max-width: 1400px){
+    .testimonial-section{
+        width:100%;
+    }
+
+    .review-form-container{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 800px ){
+    .review-form-container{
+        width: 100%;
+    }
+    .location{
+        margin:auto;
+        padding-top: 20px;
+    }
 }
