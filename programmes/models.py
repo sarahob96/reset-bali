@@ -3,20 +3,18 @@ from django.contrib.auth.models import User
 from django.conf import settings
 
 # Create your models here.
-booking_status = (("pending", "pending"),
-                  ("approved", "approved"),
-                  ("booked-out", "booked-out"))
+
 
 dates_rewind = (
         ("05/05/2023-08/05/2023", "05/05/2023-08/05/2023"),
         ("14/05/2023-17/05/2023", "14/05/2023-17/05/2023"),
-        ("25/05/2023-28/06/2023", "25/05/2023-28/06/2023"),
+        ("25/05/2023-28/05/2023", "25/05/2023-28/05/2023"),
         ("04/06/2023-07/06/2023", "04/06/2023-07/06/2023"),
         ("14/06/2023-17/06/2023", "14/06/2023-17/06/2023"),
         ("04/07/2023-07/07/2023", "04/07/2023-07/07/2023"),
         ("12/07/2023-15/07/2023", "12/07/2023-15/07/2023"),
         ("22/07/2023-25/07/2023", "22/07/2023-25/07/2023"),
-        ("08/08/2023-11/07/2023", "08/08/2023-11/07/2023"),
+        ("08/08/2023-11/08/2023", "08/08/2023-11/08/2023"),
 )
 
 dates_restart = (
@@ -45,16 +43,26 @@ class rewind(models.Model):
     user = models.CharField(max_length=20, null=True) 
     programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Rewind")
     date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
-    if programme.choices == "Rewind":
-        date.choices = dates_rewind
-    else:
-      if programme.choices == "Renew":
-        date.choices = dates_renew
-      else:  
-       if programme.choices == "restart":
-        date.choices = dates_restart
-
-    status = models.CharField(max_length=10, choices=booking_status, default="approved")
+    status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
     email = models.EmailField(max_length=50)
 
+class renew(models.Model):
+        
+    PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
+    user = models.CharField(max_length=20, null=True) 
+    programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Renew")
+    date = models.CharField(max_length=25, choices=dates_renew, default="12/05/2023-19/05/2023")
+    status = models.CharField(max_length=10, default="approved")
+    phone = models.IntegerField()
+    email = models.EmailField(max_length=50) 
+
+class restart(models.Model):
+     
+    PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
+    user = models.CharField(max_length=20, null=True) 
+    programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Restart")
+    date = models.CharField(max_length=25, choices=dates_restart, default="13/05/2023-18/05/2023")
+    status = models.CharField(max_length=10, default="approved")
+    phone = models.IntegerField()
+    email = models.EmailField(max_length=50) 
