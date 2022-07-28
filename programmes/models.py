@@ -39,9 +39,9 @@ dates_renew = (
 class Rewind(models.Model):
     """
     """
-    PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
+   
     user = models.CharField(max_length=20, null=True) 
-    programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Rewind")
+    programme = models.CharField(max_length=10,default="Rewind")
     date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
     status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
@@ -52,9 +52,9 @@ class Renew(models.Model):
     """
     """
         
-    PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
+   
     user = models.CharField(max_length=20, null=True) 
-    programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Renew")
+    programme = models.CharField(max_length=10, default="Renew")
     date = models.CharField(max_length=25, choices=dates_renew, default="12/05/2023-19/05/2023")
     status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
@@ -64,9 +64,9 @@ class Renew(models.Model):
 class Restart(models.Model):
     """
     """
-    PROGRAMMES = (("Rewind", "Rewind"), ("Renew", "Renew"), ("Restart", "Restart"))
+    
     user = models.CharField(max_length=20, null=True) 
-    programme = models.CharField(max_length=10, choices=PROGRAMMES, default="Restart")
+    programme = models.CharField(max_length=10, default="Restart")
     date = models.CharField(max_length=25, choices=dates_restart, default="13/05/2023-18/05/2023")
     status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
