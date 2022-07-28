@@ -6,8 +6,8 @@
         <div class = "hero" >
             <img src="{% static '/images/hero-image.jpeg'%}"> 
             {% if user.is_authenticated %}
-            <div >
-        <h4 class="carousel-caption user-caption"> Welcome {{ user.username }} </h4></div>
+           
+        <h4 class="carousel-caption user-caption"> Welcome {{ user.username }} </h4>
         </div>
         {% endif%}
 
