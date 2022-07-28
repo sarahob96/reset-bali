@@ -6,7 +6,7 @@ urlpatterns = [
 
     path('locations', views.locations, name="locations"),
     path('rewind', views.rewindbooking, name="rewindbooking"),
-    path('restart', views.restart, name="restart"),
+    path('restart', views.restartbooking, name="restartbooking"),
     path('renew', views.renewbooking, name="renewbooking"),
     path('ubud', views.ubud, name="ubud"),
     path('seminyak', views.seminyak, name="seminyak"),

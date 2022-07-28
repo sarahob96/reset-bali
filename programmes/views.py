@@ -69,7 +69,32 @@ def renewbooking(request):
         form = renew_form(initial={'user': user})
        
     return render(request, "programmes/renew.html", {'form': form})
+
+def restartbooking(request):
     
+    form = restart_form()  
+    if request.method == 'POST':
+        restart_fields = {
+            'user': request.POST['user'],
+            'date': request.POST['date'],
+            'programme': request.POST['programme'],
+            'email': request.POST['email'],
+            'phone': request.POST['phone'],
+        
+        }
+       
+        form = restart_form(restart_fields)
+
+        if form.is_valid():
+            form.save()
+            user = get_user(request)
+            form = restart_form(initial={'user': user})
+    else:
+        user = get_user(request)
+        form = restart_form(initial={'user': user})
+       
+    return render(request, "programmes/restart.html", {'form': form})
+
 def my_bookings(request):
     
     bookings = rewind.objects.filter(user=request.user)
