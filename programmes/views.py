@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import rewind_form
-from .models import rewind
+from .forms import rewind_form, renew_form, restart_form
+from .models import rewind, renew, restart
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user
 
@@ -45,7 +45,31 @@ def rewindbooking(request):
        
     return render(request, "programmes/rewind.html", {'form': form})
    
+def renewbooking(request):
+    
+    form = renew_form()  
+    if request.method == 'POST':
+        renew_fields = {
+            'user': request.POST['user'],
+            'date': request.POST['date'],
+            'programme': request.POST['programme'],
+            'email': request.POST['email'],
+            'phone': request.POST['phone'],
+        
+        }
+       
+        form = renew_form(renew_fields)
 
+        if form.is_valid():
+            form.save()
+            user = get_user(request)
+            form = renew_form(initial={'user': user})
+    else:
+        user = get_user(request)
+        form = renew_form(initial={'user': user})
+       
+    return render(request, "programmes/renew.html", {'form': form})
+    
 def my_bookings(request):
     
     bookings = rewind.objects.filter(user=request.user)
