@@ -11,6 +11,16 @@ def delete_booking(request, booking_id):
     booking.delete()
     return redirect('mybookings')
 
+def delete_restart_booking(request, booking_id):
+    bookings_restart = Restart.objects.get(pk=booking_id)
+    bookings_restart.delete()
+    return redirect('mybookings')
+
+def delete_renew_booking(request, booking_id):
+    bookings_renew = Renew.objects.get(pk=booking_id)
+    bookings_renew.delete()
+    return redirect('mybookings')
+
 def update_booking(request, booking_id):
     booking = Rewind.objects.get(pk=booking_id)
     form = Rewind_form(request.POST or None, instance=booking)
@@ -19,6 +29,24 @@ def update_booking(request, booking_id):
         return redirect('mybookings')
 
     return render(request, 'programmes/update_booking.html', {'booking': booking, 'form':form})
+
+def update_renew_booking(request, booking_id):
+    bookings_renew = Renew.objects.get(pk=booking_id)
+    form = Renew_form(request.POST or None, instance=bookings_renew)
+    if form.is_valid():
+        form.save()
+        return redirect('mybookings')
+
+    return render(request, 'programmes/update_booking.html', {'bookings_renew': bookings_renew, 'form':form})
+
+def update_restart_booking(request, booking_id):
+    bookings_restart = Restart.objects.get(pk=booking_id)
+    form = Restart_form(request.POST or None, instance=bookings_restart)
+    if form.is_valid():
+        form.save()
+        return redirect('mybookings')
+
+    return render(request, 'programmes/update_booking.html', {'bookings_reset': bookings_restart, 'form':form})
 
 
 def rewindbooking(request):
