@@ -4,10 +4,11 @@ from .models import Review
 
 class ReviewForm(forms.ModelForm):
     """
+    review form for user review model
     """
     def __init__(self, *args, **kwargs):
-       super(ReviewForm, self).__init__(*args, **kwargs)
-       self.fields['name'].widget.attrs['readonly'] = True
+        super(ReviewForm, self).__init__(*args, **kwargs)
+        self.fields['name'].widget.attrs['readonly'] = True
 
     class Meta:
         model = Review

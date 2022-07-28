@@ -32,17 +32,18 @@ dates_renew = (
         ("15/07/2023-22/07/2023", "15/07/2023-22/07/2023"),
         ("02/08/2023-09/08/2023", "02/08/2023-09/08/2023"),
         ("20/08/2023-27/08/2023", "20/08/2023-27/08/2023"),
-        
 )
 
 
 class Rewind(models.Model):
     """
+    model form for rewind booking
     """
-   
-    user = models.CharField(max_length=20, null=True) 
-    programme = models.CharField(max_length=10,default="Rewind")
-    date = models.CharField(max_length=25, choices=dates_rewind, default="05/05/2023-08/05/2023")
+
+    user = models.CharField(max_length=20, null=True)
+    programme = models.CharField(max_length=10, default="Rewind")
+    date = models.CharField(max_length=25, choices=dates_rewind,
+                            default="05/05/2023-08/05/2023")
     status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
     email = models.EmailField(max_length=50)
@@ -50,24 +51,26 @@ class Rewind(models.Model):
 
 class Renew(models.Model):
     """
+    model form for renew booking
     """
-        
-   
-    user = models.CharField(max_length=20, null=True) 
+
+    user = models.CharField(max_length=20, null=True)
     programme = models.CharField(max_length=10, default="Renew")
-    date = models.CharField(max_length=25, choices=dates_renew, default="12/05/2023-19/05/2023")
+    date = models.CharField(max_length=25, choices=dates_renew,
+                            default="12/05/2023-19/05/2023")
     status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
-    email = models.EmailField(max_length=50) 
+    email = models.EmailField(max_length=50)
 
 
 class Restart(models.Model):
     """
+    model form for restart booking
     """
-    
-    user = models.CharField(max_length=20, null=True) 
+    user = models.CharField(max_length=20, null=True)
     programme = models.CharField(max_length=10, default="Restart")
-    date = models.CharField(max_length=25, choices=dates_restart, default="13/05/2023-18/05/2023")
+    date = models.CharField(max_length=25, choices=dates_restart,
+                            default="13/05/2023-18/05/2023")
     status = models.CharField(max_length=10, default="approved")
     phone = models.IntegerField()
-    email = models.EmailField(max_length=50) 
+    email = models.EmailField(max_length=50)

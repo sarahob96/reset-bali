@@ -5,6 +5,5 @@ from django.shortcuts import render
 
 
 def profiles(request):
-
+    """ redirects user profile page """
     return render(request, 'profiles/profile.html')
-

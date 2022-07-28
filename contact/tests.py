@@ -15,7 +15,6 @@ class TestUrls(SimpleTestCase):
 
 
 class TestModels(TestCase):
-    
 
     def test__form(self):
         form = contact_form()
@@ -23,19 +22,17 @@ class TestModels(TestCase):
         self.assertIn("your_message", form.fields)
         self.assertIn("email", form.fields)
         self.assertIn("phone", form.fields)
-    
-  
+
     def test_contact_form_no_data(self):
         form = contact_form(data={})
         self.assertFalse(form.is_valid())
-    
+
 
 class TestViews(TestCase):
 
     def setUp(self):
         self.client = Client()
         self.contact_form_url = reverse('form_contact')
-       
 
     def test_form_contact_GET(self):
         client = Client()
