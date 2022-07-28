@@ -180,16 +180,16 @@ object-fit: contain;
 }
 
 .rewind-programme img{
-    width:70%;
+    width:100%;
     
 }
 
 .restart-programme img{
-    width:70%;
+    width:100%;
     
 }
 .renew-programme img{
-    width: 70%;
+    width: 100%;
 }
 .img-container{
     object-position: center;
@@ -393,4 +393,28 @@ i:hover{
         margin:auto;
         padding-top: 20px;
     }
+}
+
+@media screen and (max-width: 1200px){
+    .img-container{
+        padding-top:20px;
+    }
+}
+@media screen and (max-width: 767px){
+    .restart-programme img {
+        width: 100%;
+    }
+
+    .rewind-programme img {
+            width: 100%;
+    }
+    
+    .restart-programme{
+        padding-top:20px;
+    }
+
+    .renew-programme img{
+        width:100%;
+    }
+
 }
