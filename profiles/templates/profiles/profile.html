@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block title %}
+    <title> Profile </title>
+{% endblock %}
+
 {% block content %}
        <div class="profile-menu">
        <img class="profile-image" src="{% static '/images/ubud2.jpeg'%}">
        
-       <h2 class="text-centre profile-user">  {{ user.username }}'s Profile </h2>
+       <h2 class="text-centre profile-user font-italic">  {{ user.username }}'s Profile </h2>
 
        <p> <a href="{% url 'mybookings' %}"> view bookings </a></p>
        <p> <a href="{% url 'myreviews' %}"> view reviews submitted </a></p>
-       <p> <a href="{% url 'changepassword' %}"> Changed password</a></p>
+       <p> <a href="{% url 'changepassword' %}"> Change password</a></p>
 
       </div>
 {% endblock %}
