@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout, get_user
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -13,7 +13,8 @@ def password_changed(request):
 
 class changePassword(PasswordChangeView):
     password_form = PasswordChangeForm
-    success_url = reverse_lazy('password_changed')
+    success_url = reverse_lazy('password-changed')
+    
 
 
 def login_form(request):
