@@ -3,7 +3,9 @@
 
 The RESET BALI application showcases an "oasis of peace" in the form of three wellness programmes. The programmes consist of a number of activities including yoga, meditation and guided hikes. 
 
-Link to live website here
+![](readme/images/multi-device.png)
+
+Link to live website [here](https://reset-bali.herokuapp.com/)
 
 <h1> Table of Contents </h1>
 
