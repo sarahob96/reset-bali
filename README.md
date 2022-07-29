@@ -13,7 +13,7 @@ Link to live website here
   - User stories
   - The Strategy plane
   - The Scope plane
-  - The Structue plane
+  - The Structure plane
   - The Skeleton plane
     - Site Mockup
  - Features
@@ -46,7 +46,9 @@ Reset Bali is a web application that informs the user of a wellness retreat base
 
 <h2> The Scope Plane </h2>
 
-While planning the site design, I wanted to ensure the user could navigate easily throughout the site and to know where they are. I plan for the site to be bright and simple but also interactive to ensure a positive user experience. The testimonial section will give the user insight to what is on offer, giving them confidence in the service.
+While planning the site design, I wanted to ensure the user could navigate easily throughout the site and easily get to other parts of the site from every page. In the plan for the site, I wanted it to be bright, clean and simple but also interactive to ensure a positive user experience. 
+
+White and black were the main colours used throughout the site, offering that minimalistic tone. This allowed for no distractions when it came to the bold colourful images. 
 
 <h2> The Structure Plane </h2>
 
@@ -80,7 +82,97 @@ The Contact page will contain a standard 'contact us' form for the user to reach
 
 ![](readme/images/modal.png)
 
+<h3> Database Models </h3>
 
+<h4> Review model </h4>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Database key</th>
+    <th> Field Type</th> 
+    <th> Default </th>
+  </tr>
+  <tr>
+    <td> Name </td>
+    <td> name </td>
+    <td> Charfield</td>
+    <td> (logged in user autofilled)
+  </tr>
+    <tr>
+    <td> Date </td>
+    <td> date </td>
+    <td> DateField </td>
+    <td> automatic</td>
+  </tr>
+  <tr>
+    <td> Programme </td>
+    <td> programme_attended</td>
+    <td> ChariFeld </td>
+    <td> (choice dropdown)
+  </tr>
+  <tr>
+    <td> Your review </td>
+    <td> your_experience </td>
+    <td> Textfield</td>
+    <td> blank </td>
+  </tr>
+  <tr>
+    <td> Rating </td>
+    <td> rating </td>
+    <td> Integerfield</td>
+    <td> blank </td>
+  </tr>  
+  
+</table>
+
+<h4> Booking model </h4>
+
+<table>
+  <tr>
+    <th> Name </th>
+    <th> Database key</th>
+    <th> Field Type</th>
+    <th> Default </th>
+  </tr>
+  <tr>
+    <td> User </td>
+    <td> user </td>
+    <td> Charfield</td>
+    <td> (logged in user autofilled)
+  </tr>
+  <tr>
+    <td> Programme </td>
+    <td> programme </td>
+    <td> Charfield </td>
+    <td> (programme autofilled) </td>
+  </tr>
+  <tr>
+    <td> Date </td>
+    <td> date </td>
+    <td> Charfield</td>
+    <td> (choice dropdown) </td>
+  </tr>
+  <tr>
+    <td> Status </td>
+    <td> status </td>
+    <td> CharField</td>
+    <td> blank </td>
+  </tr> 
+  <tr>
+    <td> Phone </td>
+    <td> phone </td>
+    <td> integerfield</td>
+    <td> blank </td>
+  </tr>
+  <tr>
+    <td> Email </td>
+    <td> email </td>
+    <td> EmailField</td>
+    <td> blank </td>
+  </tr> 
+ </table>
+ 
 <h1> Features </h1>
 <h3> Existing Features </h3>
 
@@ -178,33 +270,116 @@ Bootstrap and media queries were used for a responsive design throughout the sit
 - The user could pay for their booking online, rather than at a later date.
 - 
 <h1> Technologies Used </h1>
-- Font awesome
-  - Font awesome icons were used on the site for the social media icons in the footer aswell as the delete/modify icons
-- Google Fonts
-- Techsini
-  - A multi device image was generated on techsini.com
-- W3C, CSS, PEP8, JShint
-- Favicon
-  - I uploaded an image to favicon which created a usable icon for my site.
+
+-   [Font Awesome](https://fontawesome.com/)
+    * Font awesome icons were used on the site for the social media icons in the footer aswell as the delete/modify icons
+  
+-  Google Fonts
+   * Both fonts that I used through the site were taken from google fonts.
+  
+-  Techsini
+   * A multi device image was generated on [techsini.com](https://techsini.com/multi-mockup/)  
+  
+-  W3C, CSS, PEP8, JShint
+   * I used the [HTML](https://validator.w3.org/) , [CSS](https://jigsaw.w3.org/css-validator/), [Python](http://pep8online.com/) and [JS](https://jshint.com/) online validators to validate my code and ensure there were no errors. 
+  
+-  Favicon
+   * I uploaded an image to favicon which created a usable icon for my site.
+  
 - Google chrome- dev tools
-  - Devtools from google chrome was used heavily during the project while styling the project and while adding media queries. It also aided in finding issues with my javascript code.
+  * Devtools from google chrome was used heavily during the project while styling the project and while adding media queries.
+  
 - Google maps - API
 
-<h3> Programming languages </h3>
-  - HTML - HTML was widely used to provide the layout and content to the website.
-  - CSS - CSS was needed to style all elements of the site
-  - Python - All backend functions were carried out using python
-  - Javascript - Custom Javascript was used in a number of features including the map feature.
+- Heroku
+  * Heroku was used to deploy the site
 
- <h3> Database </h3>
- - Heroku Postgres 
+<h3> Programming languages </h3>
+
+- HTML - HTML was widely used to provide the layout and content to the website.
+
+- CSS - CSS was needed to style all elements of the site
+
+- Python - All backend functions were carried out using python
+
+- Javascript - Custom Javascript was used in a number of features including the map feature.
+
+<h3> Frameworks and libraries </h3>
+
+- Django - high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers. 
+
+ - Bootstrap - Bootstrap is a free front-end framework for faster and easier web development
+Bootstrap includes HTML and CSS based design templates for typography, forms, buttons, tables, navigation, modals, image carousels as well as optional JavaScript plugins
+
+- jQuery - jQuery is a fast, small, and feature-rich JavaScript library
+
+
+<h3> Database </h3>
+
+- Heroku Postgres 
+    * Heroku provides a PostgreSQL database. "PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance".
 
 <h1> Testing </h1>
 
+<h4> User Story Testing </h4>
+
+- "As a first time user, I want to easily navigate the site."
+  * The minimal look to the site allows the user to easily navigate between all pages on the site. The nav bar is always present at the top of the screen, allowing the user to always have the option to get to other parts of the site. 
+
+- "As a first time user, I want to be informed about the different programmes on offer."
+  * The user is informed about whats on offer as they land on the home page. Further into the site, the user can select from one of two locations and read more about three programmes that are available.
+
+- "As a first time user, I want to read testimonials from previous customers."
+  * The user can read testimonials through a testimonial slider when they arrive on the home page.
+
+- "As a first time user, I want to register an account on the site."
+  * The option to register an account can be seen through the 'register' button on the navigation bar. The user will be redirected to a form that they can fill in to register an account.
+  
+- "As a returning user, I want to log into my account."
+  * The login button is found on the nav bar as soon as a user arrives onto the site. Once they have registered an account, they can login in through the login form.
+  
+- "As a returning user, I want to reserve a spot on an upcoming program."
+  * A booking form is found on each of the three programme pages (once the user is logged in).  Through the form, a user can select an available date and book a spot which they can then amend or delete afterwards through their profile.
+  
+- "As a returning user, I want to be able to contact the company."
+  * The user, logged in or not can contact the company through a contact form on the contact page. Other contact details are found there also.
+  
+- "As a returning user, I want to submit a review."
+  * A review form is found on the home page. The form allows the user to submit a review and view their review in the above testimonial carousel.
+
 <h4> Manual Testing </h4>
+
+<h5> The site </h5>
+
+I carried out a large number of manual tests to ensure the site navigation and all features worked as they were intended to. 
+
+- Navigation was checked by ensuring all links brought the user to the intended part of the site.
+
+- Buttons, used to submit forms and anchor elements used for both links on the site and social media links in the footer were checked.
+
+- Responsiveness was checked through googles Chrome Dev tools and through my own devices to make sure the site looked well on all screen sizes 
+
+- The site was tested on google chrome, safari and microsoft edge. 
+
+<h5> The database models </h5>
+I carried out a number of manual tests to ensure the the database models worked effectively, that all information submitted was sent to the database and then accessed, and brought to the front end.
+
+- The review form model was tested, ensuring the review information was saved and then that data was used to display in a review slider, which was also tested to ensure it rendered effectively.
+
+- I ensured that the information stored could be modified or deleted by the user that had created that information by testing the modify and delete functions found in the 'my bookings' and 'my reviews' section in the users profile.
+
+- Similarly , with the booking model, I ensured that the booking information submitted through each of the booking forms was stored effectively. This information was then passed through to the bookings section of the users profile where it could also be modifed or deleted by the user who created that information.
+
 <h4> Automated </h4>
-  - Coverage
+  - I created a number of tests in the tests.py files to test my urls, views and models. 
+  - I installed and ran the 'coverage' tool which informs you how much of your code you have tested
+  - I revieved a score of 80%.
+  
+   ![](readme/images/coverage1.png)
+ 
 <h4> Code Validation </h4>
+All code was ran through online validation services to ensure all code was valid and free from errors.
+
 <h6> W3 validator - The HTML code was passed through and validated using the W3 validator.</h6>
 
 <h6> W3 Jigsaw - All CSS code was validated using W3 Jigsaw </h6>
@@ -217,18 +392,46 @@ Bootstrap and media queries were used for a responsive design throughout the sit
  
 <h6> JS Hint - Javascript Code was validated through JS Hint </h6>
 
-<h6> Wave </h6>
-I ran my site through wave 
+<h6> WAVE Web Accessibility Evaluation Tool </h6>
+I used the wave tool to check for contrast errors. There were no issues, all tests passing.
 
-<h6> Coverage </h6>
+![](readme/images/wave.png)
+
+<h1> Deployment </h1>
+- This project was created in gitpod and deployed using Heroku.
+
+- A number of steps were carried out to ensure a successful deployment.
+
+- The final code was pushed to github and then heroku was used.
+
+- On the Heroku website, log in to your account once signed up.
+
+- Click on "create new app" once logged in.
+
+- Give the app a name and choose the correct region, USA or Europe
+
+- Click on the settings tab
+
+- Once in settings, go to the "Config Vars" and add the KEY:PORT and the VALUE:8000
+
+- After, go to the "buildpacks" section and add buildbacks 'Python'.
+
+- Go to the deployment section and click on the 'connect to Github' option
+
+- Choose the repository name you want to deploy and click 'connect'.
+
+- Choose between the 'automatic' and 'manual' deploys
+ 
+- Finally select the branch to deploy and heroku will build the final live app.
 
 <h1> Credits </h1>
 - Images were from pixabay and deposit photos
-- Font awesome
 
+- Font awesome
 
 <h1> Acknowledgements </h1>
 - My mentor Narender Singh for his advice and guidance
-- All tutors at the code Institute - Tutor support
+- All tutors that provided help at the code Institute - Tutor support
+- Family members who tested the site
 
 
