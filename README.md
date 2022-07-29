@@ -1,4 +1,7 @@
-<h1> RESET BALI - Project Portfolio 4
+<h1> RESET BALI </h1>
+<h3> Full stack project - PP4 </h3>
+
+The RESET BALI application showcases an "oasis of peace" in the form of three wellness programmes. The programmes consist of a number of activities including yoga, meditation and guided hikes. 
 
 Link to live website here
 
@@ -19,19 +22,6 @@ Link to live website here
  - Testing
  - Deployment
  - Credits
-
-
-
-
-
-
-
-
-<h1> Reset Bali  </h1>
-
-<h3> Full stack project - PP4 </h3>
-
-The RESET BALI application showcases an "oasis of peace" in the form of three wellness programmes. The programmes consist of a number of activities including yoga, meditation and guided hikes. 
 
 
 <h1> User Experience (UX) </h1>
@@ -62,7 +52,7 @@ While planning the site design, I wanted to ensure the user could navigate easil
 
 Upon visting the site, the user will first see a striking hero image that depicts the theme of the site. Below the image, the user will get a little synopsis of what to expect from 'Reset Bali', followed by some detailed information to further inform the user. Near the end of the home page, the user will be able to view testimonials and past attendees will also be able to post reviews to the site. The Nav bar contains three sections, a link to the home page, the programmes page and a contact page. 
 
-Once the user clicks on the link to the programmes, two locations will appear. The user can then choose the location of choice and the available programmes at that location will appear. The user can then then find more information on each programme and also have the option to see availability and book a space. Pricing will also be displayed.
+Once the user clicks on the link to the programmes, two locations will appear. The user can then choose the location of choice and the available programmes at that location will appear. The user can then then find more information on each programme and also have the option to book a space for an available date. Pricing and programme schedule will also be displayed.
 
 The Contact page will contain a standard 'contact us' form for the user to reach out if needed. Phone and email details aswell as the two locations are detailed to the user.
 
@@ -91,11 +81,34 @@ The Contact page will contain a standard 'contact us' form for the user to reach
 ![](readme/images/modal.png)
 
 
-<h3> Models </h3>
+<h1> Features </h1>
 
-<h4> Database </h4>
+<h3> Existing Features </h3>
 
-I will use a PostGreSQL database for the project.
+<h3> Future Features </h3>
+
+<h1> Technologies Used </h1>
+<h3> Programming languages </h3>
+  - HTML - HTML was widely used to provide the layout and content to the website.
+  - CSS - CSS was needed to style all elements of the site
+  - Python - All backend functions were carried out using python
+  - Javascript - Custom Javascript was used in a number of features including the map feature.
+
+ <h3> Database </h3>
+ - Heroku Postgres 
+
+<h1> Testing </h1>
+
+<h2> Manual Testing </h2>
+ 
+<h4> Code Validation </h4>
+- W3 validator - The HTML code was passed through and validated using the W3 validator.
+- W3 Jigsaw - All CSS code was validated using W3 Jigsaw
+- PEP8 - Validated all python code
+- JS Hint - Javascript Code was validated through JS Hint
+
+
+
 
 <h4> Review model </h4>
 
