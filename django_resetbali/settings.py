@@ -36,7 +36,7 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 
 ALLOWED_HOSTS = ['reset-bali.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu54.gitpod.io', 'https://reset-bali.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu54.gitpod.io', 'https://8000-sarahob96-resetbali-gnb3kkgvzq8.ws-eu54.gitpod.io', 'https://reset-bali.herokuapp.com/']
 
 # Application definition
 
@@ -59,7 +59,6 @@ INSTALLED_APPS = [
     'programmes',
     'contact',
     'profiles',
-   
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -154,15 +153,13 @@ SITE_ID = 1
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

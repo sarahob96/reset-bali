@@ -19,7 +19,7 @@ from home.views import form_review
 from programmes.views import rewindbooking
 
 urlpatterns = [
-    
+
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('home/', include('home.urls')),
@@ -28,6 +28,5 @@ urlpatterns = [
     path('programmes/', include('programmes.urls')),
     path('contact/', include('contact.urls')),
     path('profiles/', include('profiles.urls')),
-   
-    
+ 
 ]
