@@ -7,18 +7,19 @@
 {% block content %}
 
 {% load crispy_forms_tags %} 
+<div>
         <div class = "hero" >
             {% if user.is_authenticated %}
            
             <h4 class="text-center float-right user-hero"> Welcome {{ user.username }} </h4>
             {% endif%}
 
-            <img src="{% static '/images/hero-image.jpeg'%}"> 
+            <img src="{% static '/images/hero-image.jpeg'%}" alt="woman doing yoga"> 
            
         </div>
         
 
-        </div>
+     
         <div class="hero-text mb-3 p-4">
             <h2 class = "text-center">
                 Your peaceful oasis <Br> awaits you
@@ -45,9 +46,9 @@
                       
                         <hr class="w-50">
                         <p class="font-italic">
-                            {{ review.your_experience }}
+                            {{ review.your_experience }}</p>
                         <hr>
-                        </p>
+                        
                         <p>
                             <i class="fa-solid fa-star"></i>  {{review.rating}} / 5
                         </p>
@@ -61,7 +62,7 @@
                 </div>
 
             <div class="col review-image">
-                <img src="{%static 'images/swing1.jpeg'%}">
+                <img src="{%static 'images/swing1.jpeg'%}" alt="woman on swing">
             </div>
         </div>
        
@@ -78,7 +79,7 @@
             <form action="{% url 'form_review' %}" method="post" id="reviewPost">
                 {% csrf_token %}
                 {{ form|crispy}}
-                <button type = "submit" class="btn btn-dark" data-toggle="modal" data-target="reviewModal" aria-labelledby="thanks-modal" aria-hidden="true"> Submit review</button>
+                <button type = "submit" class="btn btn-dark" aria-hidden="true"> Submit review</button>
             </form>
             {% else %}
             <div class="text-center"> <h4> <a href="{% url 'login'%}">Login</a> to leave a review</h4></div>
@@ -87,25 +88,9 @@
             </div>
   
         </div> 
-        <input type="hidden" id="review_modal" value="{{ review_modal }}" />
-        <div class="modal" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title text-center" id="exampleModalLabel"> Your review has been submitted</h5>
-                    <button type="button" id="button-close" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p class="font-italic text-center">Thanks for sharing your review of Reset Bali {{ user.username}}.</p> 
-                    <p class="font-italic text-center">We love hearing from past attendees and hope to see you again soon! </p>
-                     
-                  </div>
-
-                </div>
-              </div>
-        </div>
+  </div>
+  </div>
+      
 
 <script>
  $(document).ready(function(){

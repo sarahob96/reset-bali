@@ -37,30 +37,13 @@
 
         <div class="col-lg-6 programme-img-div">
             
-            <img src="{%static 'images/rewind.png'%}" class="programme-img">
+            <img src="{%static 'images/rewind.png'%}" alt="programme schedule" class="programme-img">
            
         </div>
     </div>
 </div>
 
-<div class="modal" id="rewindModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header text-center">
-            <h5 class="modal-title text-center" id="exampleModalLabel"> Your booking has been confirmed</h5>
-            <button type="button" id="rewind-button-close" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="text-center"> We can't wait to see you {{ user.username }} at our rewind programme in UBUD</p> 
-            <p class="font-italic"> If you want to amend or cancel your booking, do so <a href="{% url 'mybookings' %}">here </a></p>
-             
-          </div>
 
-        </div>
-      </div>
-</div>
 
 <script>
     $(document).ready(function(){

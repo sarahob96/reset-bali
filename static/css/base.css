@@ -82,8 +82,12 @@ body{
     font-size: 20px;
 }
 
-
-
+.reviews-table-container{
+    padding: 20px;
+}
+.my-reviews-heading{
+    padding:15px;
+}
 .review-heading{
     letter-spacing: 2px;
     padding-bottom: 15px;
