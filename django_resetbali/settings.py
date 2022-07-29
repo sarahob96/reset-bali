@@ -36,7 +36,7 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 
 ALLOWED_HOSTS = ['reset-bali.herokuapp.com', 'localhost']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu54.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu54.gitpod.io', 'https://reset-bali.herokuapp.com/']
 
 # Application definition
 
