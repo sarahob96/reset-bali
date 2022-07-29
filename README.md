@@ -1,3 +1,32 @@
+<h1> RESET BALI - Project Portfolio 4
+
+Link to live website here
+
+<h1> Table of Contents </h1>
+
+
+- Project Summary
+- User Experience (UX)
+  - User stories
+  - The Strategy plane
+  - The Scope plane
+  - The Structue plane
+  - The Skeleton plane
+    - Site Mockup
+ - Features
+ - Existing Features
+ - Future Features
+ - Testing
+ - Deployment
+ - Credits
+
+
+
+
+
+
+
+
 <h1> Reset Bali  </h1>
 
 <h3> Full stack project - PP4 </h3>
@@ -38,12 +67,12 @@ Once the user clicks on the link to the programmes, two locations will appear. T
 The Contact page will contain a standard 'contact us' form for the user to reach out if needed. Phone and email details aswell as the two locations are detailed to the user.
 
 <h2> The Skeleton Plane </h2>
-
-<h3> Home page </h3>
+ <h3> Site Mockups </h3>
+<h4> Home page </h4>
 
 ![home](readme/images/home-page.png)
 
-<h3> locations and programmes </h3>
+<h4> locations and programmes </h4>
 
 ![](readme/images/program-locations.png)
 
@@ -51,11 +80,11 @@ The Contact page will contain a standard 'contact us' form for the user to reach
 
 ![](readme/images/seminyak.png)
 
-<h3> Reservations </h3>
+<h4> Reservations </h4>
 
 ![](readme/images/reservations.png)
 
-<h3> Contact us </h3>
+<h4> Contact us </h4>
 
 ![](readme/images/contact-page.png)
 
