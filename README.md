@@ -425,8 +425,9 @@ I used the wave tool to check for contrast errors. There were no issues, all tes
 - Finally select the branch to deploy and heroku will build the final live app.
 
 <h1> Credits </h1>
-- Images were from pixabay and deposit photos
 
+- Images were from pixabay and deposit photos
+- codemy.com on you tube for some handy tips
 - Font awesome
 
 <h1> Acknowledgements </h1>
