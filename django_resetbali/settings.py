@@ -34,7 +34,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
 
-ALLOWED_HOSTS = ['reset-bali.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-sarahob96-resetbali-updhdzct2fc.ws-eu54.gitpod.io']
 
