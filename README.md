@@ -159,6 +159,11 @@ The contact app provides a booking form model in which all users can contact the
 
 ![](readme/images/contact-us.png)
 
+<h2> Responsive Design </h2> 
+
+Bootstrap and media queries were used for a responsive design throughout the site.
+
+![](readme/images/rewind-phone.png)
 
 <h2> Future Features </h2>
 
@@ -173,6 +178,18 @@ The contact app provides a booking form model in which all users can contact the
 - The user could pay for their booking online, rather than at a later date.
 - 
 <h1> Technologies Used </h1>
+- Font awesome
+  - Font awesome icons were used on the site for the social media icons in the footer aswell as the delete/modify icons
+- Google Fonts
+- Techsini
+  - A multi device image was generated on techsini.com
+- W3C, CSS, PEP8, JShint
+- Favicon
+  - I uploaded an image to favicon which created a usable icon for my site.
+- Google chrome- dev tools
+  - Devtools from google chrome was used heavily during the project while styling the project and while adding media queries. It also aided in finding issues with my javascript code.
+- Google maps - API
+
 <h3> Programming languages </h3>
   - HTML - HTML was widely used to provide the layout and content to the website.
   - CSS - CSS was needed to style all elements of the site
@@ -184,8 +201,9 @@ The contact app provides a booking form model in which all users can contact the
 
 <h1> Testing </h1>
 
-<h2> Manual Testing </h2>
- 
+<h4> Manual Testing </h4>
+<h4> Automated </h4>
+  - Coverage
 <h4> Code Validation </h4>
 <h6> W3 validator - The HTML code was passed through and validated using the W3 validator.</h6>
 
@@ -199,5 +217,18 @@ The contact app provides a booking form model in which all users can contact the
  
 <h6> JS Hint - Javascript Code was validated through JS Hint </h6>
 
+<h6> Wave </h6>
+I ran my site through wave 
+
+<h6> Coverage </h6>
+
+<h1> Credits </h1>
+- Images were from pixabay and deposit photos
+- Font awesome
+
+
+<h1> Acknowledgements </h1>
+- My mentor Narender Singh for his advice and guidance
+- All tutors at the code Institute - Tutor support
 
 
